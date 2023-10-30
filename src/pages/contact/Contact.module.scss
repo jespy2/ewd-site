@@ -1,0 +1,54 @@
+.homeContainer {
+  text-align: center;
+  background-image: url(../../images/backgrounds/river.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+
+  .espylogo {
+    width: 20rem;
+    height: 22rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    svg {
+      width: 15rem;
+      height: 15rem;
+      fill: white;
+    }
+
+    .nameContainer {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      margin-top: 1rem;
+    }
+  }
+  .navContainer {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 1rem;
+  }
+}
+:global(.navLink) {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+  &.active {
+    color: yellow;
+    }
+  }
