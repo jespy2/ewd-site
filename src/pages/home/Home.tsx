@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Link, Typography } from '@mui/material';
 
-import { ReactComponent as EspyLogo } from '../../images/logos/espylogo.svg';
+import { Footer } from '../../components/footer/Footer';
 import styles from './Home.module.scss';
 
 
@@ -25,20 +25,8 @@ export const Home = () => {
           In a rapidly evolving tech landscape, you need someone who can translate your vision into elegant, functional, and scalable front-end solutions while seamlessly integrating with your business objectives. I'm that person, and I'm here to help your team shine. Let's create something incredible together.
         </Typography>
       </Box>
-      <Box className={styles.espylogo} >
-        <Link href="/" >
-          <EspyLogo />
-        </Link>
-        <Box className={styles.nameContainer}>
-          <Typography variant='h2' >james espy</Typography>
-          <Typography variant='h5' >SOFTWARE ENGINEER</Typography>
-        </Box>
-      </Box>
-      <Box className={styles.navContainer}>
-        <Link href="/about" className={styles.navLink} variant='h6' underline='none' >ABOUT</Link>
-        <Link href="/portfolio"  className={styles.navLink} variant='h6' underline='none' >PORTFOLIO</Link>
-        <Link href="/contact" className={styles.navLink} variant='h6' underline='none' >CONTACT</Link>
-      </Box>
+      
+      <Footer page='home' />
     </div>
   );
 };

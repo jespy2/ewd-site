@@ -23,7 +23,7 @@ export const Accordian = () => {
 				<AccordionDetails>
 					<Card className={styles.hobbiesCard}>
             <CardMedia
-              sx={{ height: 140 }}
+              sx={{ height: item.title === 'Martial Arts' ? 200 : 140 }}
               image={item.image}
               title={item.imagetitle}
             />
