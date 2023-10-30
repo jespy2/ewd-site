@@ -1,0 +1,63 @@
+.resumeModal, .cityPickerModal {
+  position: absolute;
+  top: 2rem;
+  left: 25%;
+  height: 40rem;
+  width: 50rem;
+  text-align: left;
+  border-radius: 15px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  background-color: rgb(0,0,0,.6);
+  color: white;
+  padding: 1rem;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+
+  img {
+    width: 100%
+  }
+  .closeContainer {
+    text-align: right;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}
+
+.resumeModal {
+  overflow-y: scroll;
+  }
+
+.cityPickerModal {
+  div > a > img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
