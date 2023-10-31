@@ -8,6 +8,7 @@ import CityPickerLogo from "../../../images/logos/citypickerlogo.svg";
 import styles from "../Portfolio.module.scss";
 
 interface IProps {
+  setOpenGreeting: Dispatch<SetStateAction<boolean>>
   setOpenResume: Dispatch<SetStateAction<boolean>>
   setOpenGoMenu: Dispatch<SetStateAction<boolean>>
   setOpenStorial: Dispatch<SetStateAction<boolean>>
@@ -15,7 +16,7 @@ interface IProps {
 }
 
 export const ButtonPanel = (props: IProps) => {
-  const { setOpenResume, setOpenGoMenu, setOpenStorial, setOpenCityPicker } = props;
+  const { setOpenGreeting, setOpenResume, setOpenGoMenu, setOpenStorial, setOpenCityPicker } = props;
 	return (
 		<Box className={styles.linksContainer}>
 			<Box
@@ -26,6 +27,7 @@ export const ButtonPanel = (props: IProps) => {
 					alignItems: "center",
 				}}
 				onClick={() => {
+					setOpenGreeting(false);
 					setOpenResume(true);
 					setOpenGoMenu(false);
 					setOpenStorial(false);
@@ -47,6 +49,7 @@ export const ButtonPanel = (props: IProps) => {
 			<Box
 				className={styles.whiteLogoBkgrd}
 				onClick={() => {
+					setOpenGreeting(false);
 					setOpenResume(false);
 					setOpenGoMenu(true);
 					setOpenStorial(false);
@@ -62,6 +65,7 @@ export const ButtonPanel = (props: IProps) => {
 			<Box
 				className={styles.whiteLogoBkgrd}
 				onClick={() => {
+					setOpenGreeting(false);
 					setOpenResume(false);
 					setOpenGoMenu(false);
 					setOpenStorial(true);
@@ -77,6 +81,7 @@ export const ButtonPanel = (props: IProps) => {
 			<Box
 				className={styles.whiteLogoBkgrd}
 				onClick={() => {
+					setOpenGreeting(false);
 					setOpenResume(false);
 					setOpenGoMenu(false);
 					setOpenStorial(false);

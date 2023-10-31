@@ -14,6 +14,7 @@ export interface IModalProps {
 }
 
 interface IModalConfig {
+  greeting: IModalProps;
   resume: IModalProps;
   gomenu: IModalProps;
   storial: IModalProps;
@@ -21,6 +22,16 @@ interface IModalConfig {
 }
 
 export const modalConfig: IModalConfig = {
+  greeting: {
+    modal: 'greeting',
+    class: 'greetingModal',
+    children:
+      <>
+        <Typography variant='h4' >Welcome to my portfolio</Typography>
+        <Typography variant='body1' >I've been engineering for quite a while now.  Please use the buttons on the right to see some of my work and review my resume.</Typography><br />
+     
+      </>
+  },
   resume: {
     modal: 'resume',
     class: 'resumeModal',

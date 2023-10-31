@@ -9,15 +9,24 @@ import styles from './Modal.module.scss';
 
 interface IProps {
   modalProps: IModalProps,
-  setModalState: Dispatch<SetStateAction<boolean>>
+  setOpenGreeting: Dispatch<SetStateAction<boolean>>
+  setModalState?: Dispatch<SetStateAction<boolean>>
 }
 
 export const Modal = (props: IProps) => {
-  const { modalProps, setModalState } = props;
+  const { modalProps, setOpenGreeting, setModalState } = props;
 
   return (
     <Box className={styles[String(modalProps.class)]} >
-      <Box className={styles.closeContainer} onClick={() => setModalState(false)} ><CloseIcon /> </Box>
+      <Box
+        className={styles.closeContainer}
+        onClick={() => {
+          setModalState && setOpenGreeting(true)
+          setModalState && setModalState(false)
+        }}
+      >
+        <CloseIcon />
+      </Box>
       {modalProps.children}
     </Box>
   );
