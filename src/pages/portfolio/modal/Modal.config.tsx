@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 import { Box, Link, Typography } from '@mui/material';
 
 import GithubLogo from '../../../images/logos/github.png';
+import GoMenuLogo from '../../../images/logos/gomenulogo.svg';
+import StorialLogo from '../../../images/logos/storiallogo.png';
 import CityPickerLogo from '../../../images/logos/citypickerlogo.svg';
 import Resume from '../../../assets/resume.png'
 
@@ -13,6 +15,8 @@ export interface IModalProps {
 
 interface IModalConfig {
   resume: IModalProps;
+  gomenu: IModalProps;
+  storial: IModalProps;
   city_picker: IModalProps;
 }
 
@@ -22,32 +26,135 @@ export const modalConfig: IModalConfig = {
     class: 'resumeModal',
     children: <img src={Resume} alt="resume" />
   },
+  gomenu: {
+    modal: 'gomenu',
+    class: 'goMenuModal',
+    children: 
+      <>
+        <Typography variant='h4' >GoMenu</Typography>
+        <Typography variant='body1' >After spending the past two years as a frontend dev, this project is me getting back to my roots in fullstack engineering, as well as flex some of my skills that have matured in recent years.  I wanted something that had some interesting challenges in designing the UI and in the service layer, so I had the idea for an app that would take a URL for a recipe, scrape the page and enter the data into a form for the user to submit as a recipe card that gets added to the "cookbook".  A user is then able to add comments and ratings to their recipes, as well as find them easily through search and filtering.</Typography><br />
+        <Typography variant='body1' >I used Figma for wireframing, Inkskape for icons and logos, and built a Jira board to track tasks and progress, along with managing deadlines. The frontend is built in React/Typescript and styled with SCSS and Material UI.  I built the server using Node/Express, which handles the CRUD functionality and webscrapping.  I appied cloudbased MongoDB for the database.  Search and filtering is handled by Atlas search and server-side middleware.</Typography><br />
+        <Typography variant='body1' >This project should be ready for MVP release very soon, and I have a roadmap for adding features and quality of life updates soon after.</Typography><br />
+        <Box >
+          <Link href='https://github.com/jespy2/gomenu' variant='body2' target='_blank' underline='none' color='yellow'>
+            <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
+            Review the code
+          </Link>
+          <Link
+            href='https://github.com/jespy2'
+            variant='body2'
+            target='_blank'
+            underline='none'
+            color='yellow'
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              marginTop: '1rem'
+            }}
+          >
+            <Box sx={{
+              backgroundColor: 'white',
+              borderRadius: '4px',
+              width: '1.5rem',
+              height: '1.5rem',
+              marginRight: '1rem'
+              }}>
+              <img
+                src={GoMenuLogo}
+                alt='launch storial app'
+                style={{ width: '100%', height: '100%', margin: '0 auto' }}
+              />
+            </Box>
+            Check back--you will be able to try out the app in your browser upon release        
+          </Link>
+        </Box>
+      </>
+  },
+  storial: {
+    modal: 'storial',
+    class: 'storialModal',
+    children: 
+      <>
+        <Typography variant='h4' >Storial</Typography>
+        
+        <Typography variant='body1' >This was for an assessment I did in 2021 for a role I ended up taking.  The prompt was the following:</Typography>
+        <Typography variant='body2' sx={{ fontStyle: 'italic' }} >Using the UI framework of your choice, build a UI around a hypothetical RESTful library API. Assume this API returns a list of books in a library, and allows for CRUD operations on a single book. The application should support those endpoints.</Typography><br />
+        <Typography variant='body1' >Because this was a frontend-only role, I was only tasked with building the UI, but decided to build a fullstack app so that the reviewing team could punch through the final product.  I started with a using Adobe products to build the branding package, including name, logo, color palate and wireframing.  The frontend was in React and I took the opportunity to try out Tailwind.css (which I enjoyed and ended up using quite a bit in my new role).  The backend was built with Node/Express and MongoDB. </Typography><br />
+        <Typography variant='body1' >Since this was a takehome assessment, I had only a few days to go from design to prod.  This is the end result.</Typography><br />
+        <Box >
+          <Link href='https://github.com/jespy2/storial' variant='body2' target='_blank' underline='none' color='yellow'>
+            <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
+            Review the code and run the app on your machine (documentation and quick start guide in the README)
+          </Link>
+          <Link
+            href='https://github.com/jespy2'
+            variant='body2'
+            target='_blank'
+            underline='none'
+            color='yellow'
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              marginTop: '1rem'
+            }}
+          >
+            <Box sx={{
+              backgroundColor: 'white',
+              borderRadius: '4px',
+              width: '1.5rem',
+              height: '1.5rem',
+              marginRight: '1rem'
+              }}>
+              <img
+                src={StorialLogo}
+                alt='launch storial app'
+                style={{ width: '100%', height: '100%', margin: '0 auto' }}
+              />
+            </Box>
+            Try out the app in your browser          
+          </Link>
+        </Box>
+      </>
+  },
   city_picker: {
     modal: 'city_picker',
     class: 'cityPickerModal',
     children: 
       <>
         <Typography variant='h4' >City Picker</Typography>
-        <Typography variant='body1' >This app was built mobile-first. I engage with web content primarily through my laptop I realize that can influence my layout planning. So for this project, I started with mobile and then scaled it to larger screens. This led to using a more card-based approach.</Typography><br />
+        <Typography variant='body1' >This was one of my first projects in React.  The code is a bit rough, as I was tackling a bunch of new tech and concepts.  This is a relatively simple project in retrospect, but it was an important step for me in bringing together much of what I'd learned on my own on the path to becoming an enterprise-level engineer (as oppposed to a freelance website designer).</Typography><br />
 
-        <Typography variant='body1' >My intention with this project was to highlight my front-end skills. There was some interesting challenges with the data (collection, processing and algorithm development), but didn"’"t want to make that too central to this addition to my portfolio.</Typography><br />
+        <Typography variant='body1' >My intention with this project was to highlight my front-end skills. There was some interesting challenges with the data (collection, processing and algorithm development), but didn't want to make that too central to this addition to my portfolio.</Typography><br />
 
-        <Typography variant='body1' >So, I went with a small data set and only four variables with which the user can interact with the data. I could see at some point coming back to this app, adding a backend, expanding the dataset to encompass most US cities (including towns under 50,000) and increasing the variable choices to include things like cost of living, religiosity, commute times, etc. This is a very scalable project.</Typography><br />
+        <Typography variant='body1' >So, I went with a small data set and only four variables with which the user can interact with the data. I could see at some point coming back to this app, adding a backend, expanding the dataset to encompass most US cities (including towns under 50,000) and increasing the variable choices to include things like cost of living, religiosity, commute times, etc. This is a very scalable project, though I would need to do some major refactors first to encorporate more advanced design principles and integrate tech that I wasn't familiar with at the time (such as Typescript)</Typography><br />
 
-        <Typography variant='body1' >The UI was built with React.js. This was my first project using Affinity products instead of Adobe Creative. I built the wireframes using Publisher and the images (logos and icons) with Photo and Designer. I did the webscrapping and data processing in Node.js.</Typography><br />
+        <Typography variant='body1' >The UI was built with vanilla React.js. I built a branding package with wireframes, images (logos and icons) and color palate. I did the webscrapping and data processing in Node.js.</Typography><br />
 
         <Typography variant='body1' >A quick note on UX: In designing the sliders for selecting variable ranges, I intentionally left out quantifying feedback like tick markers or popups on the handles that gave a specific number or party range. I wanted it to be more a "feel" experience than a "think" experience.</Typography><br />
         <Box>
-
-          <Link href='https://github.com/jespy2' variant='h6' target='_blank' underline='none'>
-            <img src={GithubLogo} alt='github' /> Review the code
+          <Box >
+          <Link href='https://github.com/jespy2' variant='body2' target='_blank' underline='none' color='yellow'>
+            <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
+            Review the code and run the app on your machine (documentation and quick start guide in the README)
           </Link>
-          <Link href='https://github.com/jespy2' variant='h6' target='_blank' underline='none'>
+          <Link
+            href='https://espywebdesign.com/reactApps/citypicker/index.html'
+            variant='body2'
+            target='_blank'
+            underline='none'
+            color='yellow'
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              marginTop: '1rem'
+            }}
+          >
             <Box sx={{
               backgroundColor: 'white',
               borderRadius: '4px',
-              width: '1rem',
-              height: '1rem',
+              width: '1.5rem',
+              height: '1.5rem',
+              marginRight: '1rem',
               }}>
               <img
                 src={CityPickerLogo}
@@ -55,8 +162,9 @@ export const modalConfig: IModalConfig = {
                 style={{ width: '100%', height: '100%', margin: '0 auto' }}
               />
             </Box>
-            Try out the app            
+            Try out the app in your browser          
           </Link>
+        </Box>
         </Box>
       </>
   }

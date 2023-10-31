@@ -1,4 +1,4 @@
-.resumeModal, .cityPickerModal {
+.resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
   position: absolute;
   top: 2rem;
   left: 25%;
@@ -51,13 +51,17 @@
   }
 }
 
-.resumeModal {
+.resumeModal, .cityPickerModal {
   overflow-y: scroll;
   }
 
-.cityPickerModal {
+.cityPickerModal, .goMenuModal, .storialModal {
   div > a > img {
     width: 1rem;
     height: 1rem;
   }
+}
+
+.storialModal {
+  height: 30rem;
 }
