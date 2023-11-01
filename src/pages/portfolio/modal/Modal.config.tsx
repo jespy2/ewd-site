@@ -133,7 +133,7 @@ export const modalConfig: IModalConfig = {
     children: 
       <>
         <Typography variant='h4' >City Picker</Typography>
-        <Typography variant='body1' >This was one of my first projects in React.  The code is a bit rough, as I was tackling a bunch of new tech and concepts.  This is a relatively simple project in retrospect, but it was an important step for me in bringing together much of what I'd learned on my own on the path to becoming an enterprise-level engineer (as oppposed to a freelance website designer).</Typography><br />
+        <Typography variant='body1' >This was one of my first app projects in React (as opposed to "static" websites, which I'd been building for a few years).  The code is a bit rough, as I was tackling a bunch of new tech and concepts.  This is a relatively simple project in retrospect, but it was an important step for me in bringing together much of what I'd learned on my path to becoming an enterprise-level engineer (transitioning from freelance website design).</Typography><br />
 
         <Typography variant='body1' >My intention with this project was to highlight my front-end skills. There was some interesting challenges with the data (collection, processing and algorithm development), but didn't want to make that too central to this addition to my portfolio.</Typography><br />
 
@@ -144,9 +144,9 @@ export const modalConfig: IModalConfig = {
         <Typography variant='body1' >A quick note on UX: In designing the sliders for selecting variable ranges, I intentionally left out quantifying feedback like tick markers or popups on the handles that gave a specific number or party range. I wanted it to be more a "feel" experience than a "think" experience.</Typography><br />
         <Box>
           <Box >
-          <Link href='https://github.com/jespy2' variant='body2' target='_blank' underline='none' color='yellow'>
+          <Link href='https://github.com/jespy2/CityPicker' variant='body2' target='_blank' underline='none' color='yellow'>
             <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
-            Review the code and run the app on your machine (documentation and quick start guide in the README)
+            Review the code and run the app on your machine (documentation README)
           </Link>
           <Link
             href='https://espywebdesign.com/reactApps/citypicker/index.html'

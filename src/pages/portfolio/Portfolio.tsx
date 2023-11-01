@@ -17,9 +17,7 @@ export const Portfolio = () => {
   const [openStorial, setOpenStorial] = useState(false);
   const [openCityPicker, setOpenCityPicker] = useState(false);
 
-  useEffect(() => { setOpenGreeting(true) }, []);
-  // useEffect(() => { setOpenGreeting(false) }, [openResume, openGoMenu, openStorial, openCityPicker]);
-  
+  useEffect(() => { setOpenGreeting(true) }, []);  
 
   return (
     <Box className={styles.homeContainer} >

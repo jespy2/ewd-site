@@ -1,9 +1,9 @@
-.greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
+.contactFormContainer {
   position: absolute;
-  top: 2rem;
-  left: 25%;
-  height: 40rem;
-  width: 50rem;
+  top: 10rem;
+  left: 30%;
+  height: 20rem;
+  width: 30rem;
   text-align: left;
   border-radius: 15px;
   margin: 0 auto;
@@ -17,12 +17,18 @@
   -o-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
 
-  img {
-    width: 100%
+  .contactForm {
+    display: flex;
+    flex-direction: column;
   }
-  .closeContainer {
-    text-align: right;
-    cursor: pointer;
+
+  .thankyouMessage {
+    position: absolute;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   @keyframes fadeIn {
@@ -49,24 +55,4 @@
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
-}
-
-.resumeModal, .cityPickerModal {
-  overflow-y: scroll;
-  }
-
-.cityPickerModal, .goMenuModal, .storialModal {
-  div > a > img {
-    width: 1rem;
-    height: 1rem;
-  }
-}
-
-.storialModal {
-  height: 30rem;
-}
-
-.greetingModal {
-  top: 10rem;
-  height: 10rem;
 }

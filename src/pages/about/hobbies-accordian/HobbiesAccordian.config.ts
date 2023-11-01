@@ -27,12 +27,12 @@ export const hobbiesAccordianProps: IHobbiesAccordianProps[] = [
     title: 'Camping',
     image: Hammock,
     imagetitle: 'relaxing in the woods',
-    text: 'Camping brings me closer to nature and reminds me of the beauty of simplicity. It"s a source of inspiration for elegant, minimalist design in software. Just as I appreciate the serenity of a night under the stars, I strive to create clean and intuitive interfaces that make users feel at ease, supported by a backend that is elegant and efficient.  I"ve often said that the beauty of a well designed UI can be like art, profoking emotion and even aesthetic beauty, but a well designed backend is like Amish furniture, where the beauty is found in simplicity and functionality.  Camping refreshes my connection to simplicity and beauty, and reminds me of the importance of both in my work.'
+    text: "Camping brings me closer to nature and reminds me of the beauty of simplicity. It's a source of inspiration for elegant, minimalist design in software. Just as I appreciate the serenity of a night under the stars, I strive to create clean and intuitive interfaces that make users feel at ease, supported by a backend that is elegant and efficient.  I've often said that the beauty of a well designed UI can be like art, profoking emotion and even aesthetic beauty, but a well designed backend is like Amish furniture, where the beauty is found in simplicity and functionality.  Camping refreshes my connection to simplicity and beauty, and reminds me of the importance of both in my work."
   },
   {
     title: 'Family',
     image: Hike,
     imagetitle: 'family hike',
-    text: 'Of all my hobbies, spending time with my family is the most cherished. We are outdoors when we can.  When inside, we play games, cook, have pun-offs and watch shows/movies together.  Spending time with my family reminds me that life is not just about lines of code but also about the meaningful connections we build. It"s a constant reminder to keep the "human" in "human-centered design," ensuring that the technology I create enhances people"s lives.'
+    text: 'Of all my hobbies, spending time with my family is the most cherished. We are outdoors when we can.  When inside, we play games, cook, have pun-offs and watch shows/movies together.  Spending time with my family reminds me that life is not just about lines of code but also about the meaningful connections we build. It is a constant reminder to keep the "human" in "human-centered design", ensuring that the technology I create enhances people\'s lives.'
   },
 ]
