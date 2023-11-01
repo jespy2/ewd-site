@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 import { sendEmail, contactFields } from "./ContactForm.config";
 
