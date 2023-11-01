@@ -10,11 +10,11 @@ export const Home = () => {
     <div className={styles.homeContainer} >
       <Box className={styles.homeInfoContainer} >
         <Typography variant='body1' display="block" >
-          Welcome to my site.  I'm a seasoned software engineer with a passion for crafting exceptional user experiences through full-stack development. My specialty lies in building captivating front-end applications that not only look great but also function seamlessly. What sets me apart is my unique blend of technical prowess and a profound understanding of business, communication, and empathetic team building.
+          Welcome to my site.  I'm a seasoned software engineer with a passion for crafting exceptional user experiences through full-stack development. My specialty lies in building captivating front-end applications that not only look great but also function seamlessly because they are built on elegantly designed backends. What sets me apart is my unique blend of technical prowess and a profound understanding of business, communication, and empathetic team building.
         </Typography>
         <br/>
         <Typography variant='body1' display="block" >
-          With years of hands-on experience in the software development world, I've honed my skills in creating user-friendly interfaces that leave a lasting impression. But my journey doesn't stop at the code; I've also navigated the complexities of business, from startups to established enterprises, and understand how software can drive growth and innovation.
+          With years of hands-on experience in the software development world, I've honed my skills in creating user-friendly interfaces that leave a lasting impression served by well thought out, reliable backends. But my journey doesn't stop at the code; I've also navigated the complexities of business, from startups to established enterprises, and understand how software can drive growth and innovation.
         </Typography>
         <br/>
         <Typography variant='body1' >
@@ -22,7 +22,7 @@ export const Home = () => {
         </Typography>
         <br/>
         <Typography variant='body1' >
-          In a rapidly evolving tech landscape, you need someone who can translate your vision into elegant, functional, and scalable front-end solutions while seamlessly integrating with your business objectives. I'm that person, and I'm here to help your team shine. Let's create something incredible together.
+          In a rapidly evolving tech landscape, you need someone who can translate your vision into elegant, functional, and scalable solutions while seamlessly integrating with your business objectives. I'm that person, and I'm here to help your team shine. Let's create something incredible together.
         </Typography>
       </Box>
       

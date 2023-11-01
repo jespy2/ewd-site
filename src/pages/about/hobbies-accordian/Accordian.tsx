@@ -1,5 +1,5 @@
-import React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Accordion, AccordionSummary, AccordionDetails, Card, CardContent, CardMedia, ClickAwayListener, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { hobbiesAccordianProps } from './HobbiesAccordian.config';
@@ -7,10 +7,25 @@ import { hobbiesAccordianProps } from './HobbiesAccordian.config';
 import styles from './HobbiesAccordian.module.scss';
 
 export const Accordian = () => { 
+	const [expanded, setExpanded] = useState({
+		'Martial Arts': false,
+		Motorcycles: false,
+		Camping: false,
+		Family: false,
+	});
+
+	const handleClickAway = (accordianName: string) => { 
+		setExpanded({ ...expanded, [accordianName]: false });
+	}
 
   const accordianItems = hobbiesAccordianProps.map((item) => { 
-    return (
-      <Accordion className={styles.HobbiesAccordianItem}>
+		return (
+			<ClickAwayListener onClickAway={() => handleClickAway(item.title)}>
+				<Accordion
+					className={styles.HobbiesAccordianItem}
+					expanded={expanded[item.title as keyof typeof expanded]}
+					onChange={() => setExpanded({ ...expanded, [item.title]: !expanded[item.title as keyof typeof expanded] })}
+				>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
 					aria-controls='panel1a-content'
@@ -34,7 +49,8 @@ export const Accordian = () => {
 						</CardContent>
 					</Card>
 				</AccordionDetails>
-			</Accordion>
+				</Accordion>
+			</ClickAwayListener>
     )
   });
   return (
