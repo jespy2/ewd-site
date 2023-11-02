@@ -34,6 +34,31 @@
   margin-top: 1rem;
 }
 
+
+
+@media screen and (max-width: 1200px) {
+  .espylogo {
+    width: 12rem;
+    height: 12rem;
+    bottom: 1rem;
+    left: 0;
+    svg {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    .nameContainer {
+      margin-top: .5rem;
+      h2 {
+        font-size: 1.75rem;
+      }
+      h5 {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 900px) {
   .espylogo {
   width: 10rem;
@@ -54,30 +79,33 @@
       font-size: .75rem;
     }
   }
-}
-.navContainer {
-  bottom: 1rem;
-  right: 1rem;
-  h6 {
-    font-size: 1rem;
   }
-  a {
-    font-size: 1rem;
+  .navContainer {
+    bottom: 1rem;
+    right: 1rem;
+    h6 {
+      font-size: 1rem;
+    }
+    a {
+      font-size: 1rem;
+    }
   }
-}
 }
 
 @media screen and (max-width: 600px) {
   .espylogo {
-  width: 7rem;
-  height: 8rem;
-  svg {
-    width: 5rem;
-    height: 5rem;
-  }
+    display: flex;
+      align-items: center;
+      justify-content: center;
+    width: 8rem;
+    height: 3rem;
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
 
   .nameContainer {
-    margin-top: .25rem;
+    margin-top: .1rem;
     h2 {
       font-size: 1rem;
     }
