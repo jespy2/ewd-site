@@ -1,15 +1,18 @@
-import React from "react";
-import { Box, Link, Typography } from "@mui/material";
+import { useState } from "react";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 
 import { HobbiesAccordian } from "./hobbies-accordian/HobbiesAccordian";
 import { Footer } from "../../components/footer/Footer";
 import styles from "./About.module.scss";
 
 export const About = () => {
+	const [infoHidden, setInfoHidden] = useState<boolean>(false)
+
+	const screenIsSmall = useMediaQuery('(max-width:600px)');
 	return (
     <div className={styles.homeContainer}>
-      <HobbiesAccordian />
-			<Box className={styles.aboutInfoContainer}>
+      <HobbiesAccordian setInfoHidden={setInfoHidden} />
+			<Box className={styles.aboutInfoContainer} sx={{display: infoHidden && screenIsSmall ? 'none' : 'block'}}>
 				<Typography variant='body1' display='block'>
 					Welcome to the 'Hobbies' section of my portfolio site! Beyond the world of coding, I'm a passionate individual with a diverse set of interests that play a significant role in shaping me as a software engineer.
 				</Typography>

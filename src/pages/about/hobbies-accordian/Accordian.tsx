@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Card, CardContent, CardMedia, ClickAwayListener, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -6,7 +6,7 @@ import { hobbiesAccordianProps } from './HobbiesAccordian.config';
 
 import styles from './HobbiesAccordian.module.scss';
 
-export const Accordian = () => { 
+export const Accordian = ({setInfoHidden}: {setInfoHidden: Dispatch<SetStateAction<boolean>>}) => { 
 	const [expanded, setExpanded] = useState({
 		'Martial Arts': false,
 		Motorcycles: false,
@@ -24,7 +24,11 @@ export const Accordian = () => {
 				<Accordion
 					className={styles.HobbiesAccordianItem}
 					expanded={expanded[item.title as keyof typeof expanded]}
-					onChange={() => setExpanded({ ...expanded, [item.title]: !expanded[item.title as keyof typeof expanded] })}
+					onChange={() => {
+						setExpanded({ ...expanded, [item.title]: !expanded[item.title as keyof typeof expanded] })
+						setInfoHidden(!expanded[item.title as keyof typeof expanded] ? true : false)
+					}
+					}
 				>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
@@ -42,7 +46,7 @@ export const Accordian = () => {
               image={item.image}
               title={item.imagetitle}
             />
-            <CardContent>
+            <CardContent className={styles.accordianItemContent}>
 							<Typography variant='body1' display='block'>
 								{item.text}
 							</Typography>
