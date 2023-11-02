@@ -33,3 +33,69 @@
   color: white;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 900px) {
+  .espylogo {
+  width: 10rem;
+  height: 10rem;
+  bottom: 0;
+  left: 0;
+  svg {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .nameContainer {
+    margin-top: .5rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+    h5 {
+      font-size: .75rem;
+    }
+  }
+}
+.navContainer {
+  bottom: 1rem;
+  right: 1rem;
+  h6 {
+    font-size: 1rem;
+  }
+  a {
+    font-size: 1rem;
+  }
+}
+}
+
+@media screen and (max-width: 600px) {
+  .espylogo {
+  width: 7rem;
+  height: 8rem;
+  svg {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .nameContainer {
+    margin-top: .25rem;
+    h2 {
+      font-size: 1rem;
+    }
+    h5 {
+      font-size: .5rem;
+    }
+  }
+}
+.navContainer {
+  width: 60vw;
+  bottom: .5rem;
+  right: .5rem;
+  text-align: right;
+  h6 {
+    font-size: .8rem;
+  }
+  a {
+    font-size: .8rem;
+  }
+}
+}
