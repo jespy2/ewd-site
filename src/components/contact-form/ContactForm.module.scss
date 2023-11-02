@@ -56,3 +56,23 @@
     100% { opacity: 1; }
   }
 }
+
+@media screen and (max-width: 900px) {
+  .contactFormContainer {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .contactFormContainer {
+    top: 1rem;
+    left: .5rem;
+    right: .5rem;
+    width: 90%;
+  }
+}
+

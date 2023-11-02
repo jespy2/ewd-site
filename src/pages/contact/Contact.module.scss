@@ -1,4 +1,4 @@
-.homeContainer {
+.contactContainer {
   text-align: center;
   background-image: url(../../images/backgrounds/river.jpg);
   background-position: center;
@@ -15,14 +15,61 @@
     width: 10rem;
     display: flex;
     flex-direction: column;
-
+    a {
+      padding: 1rem;
+    }
     img {
       width: 5rem;
       height: 5rem;
-      padding: 1rem;
-      margin: 1rem;
     }
   }
+}
 
+@media screen and (max-width: 1200px) {
+  .contactContainer {  
+    .linksContainer {
+      right: 1rem;
+      width: 7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contactContainer {  
+    .linksContainer {
+      top: unset;
+      bottom: 8rem;
+      right: 5rem;
+      height: 5rem;
+      width: 10rem;
+      display: flex;
+      flex-direction: row;
   
+      img {
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
+        margin: 0;
+      }
+  
+      a {
+        width: 3rem;
+        height: 3rem;
+        padding: 1rem;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contactContainer {  
+    .linksContainer {
+      top: unset;
+      right: unset;
+      bottom: 8rem;
+      width: 100%;
+      justify-content: center;
+    }
+  }
 }

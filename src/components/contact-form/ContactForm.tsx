@@ -31,7 +31,7 @@ export const ContactForm = () => {
         >
 				<Box className={styles.contactForm}>
 					{contactFields}
-            <Button type='submit' variant='outlined' sx={{marginTop: "1rem"}} >
+            <Button type='submit' variant='outlined' sx={{marginTop: "2rem"}} >
 						Send
 					</Button>
 				</Box>
