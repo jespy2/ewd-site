@@ -70,3 +70,69 @@
   top: 10rem;
   height: 10rem;
 }
+
+
+
+@media screen and (max-width: 1410px) {
+  .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
+  top: 2rem;
+  left: 20rem;
+  height: 40rem;
+  width: 40rem;
+  margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 1200px) {
+  .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
+    top: 2rem;
+    left: 2rem;
+    height: 38rem;
+    width: 40rem;
+    margin: 0 auto;
+  }
+  
+  .greetingModal {
+    top: 5rem;
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
+    top: 2rem;
+    left: 2rem;
+    height: 38rem;
+    width: 25rem;
+    margin: 0 auto;
+    overflow-y: scroll;
+  }
+  .resumeModal {
+    overflow-x: scroll;
+    img {
+      width: 50rem;
+    }
+  }
+  
+  .greetingModal {
+    top: 5rem;
+    height: 10rem;
+    width: 25rem;
+  }    
+}
+
+@media screen and (max-width: 600px) {
+  .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
+    top: 12rem;
+    left: 2rem;
+    height: 70%;
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: scroll;
+  }
+  
+  .greetingModal {
+    height: 13rem;
+    width: 90%;
+  }  
+}

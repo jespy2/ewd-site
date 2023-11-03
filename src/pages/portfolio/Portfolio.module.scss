@@ -59,3 +59,40 @@
     100% { opacity: 1; }
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .homeContainer {
+    .linksContainer {
+      top: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .homeContainer {
+    .linksContainer {
+      top: 1rem;
+    }
+  }    
+}
+
+@media screen and (max-width: 900px) {
+  .homeContainer {
+    .linksContainer {
+      right: 1rem;
+      width: 5rem;
+    }
+  }      
+}
+
+@media screen and (max-width: 600px) {
+  .homeContainer {
+    .linksContainer {
+      right: 1.5rem;
+      left: 1.5rem;
+      width: 90%;
+      flex-direction: row;
+    }
+  }  
+  
+}
