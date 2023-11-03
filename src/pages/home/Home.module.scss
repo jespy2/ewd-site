@@ -85,7 +85,8 @@
     
       .homeInfoContainer {
         top: unset;
-        left: unset;
+        left: 50%;
+        transform: translateX(-50%);
         margin: .5rem auto;
         height: 85%;
         width: 85%;

@@ -70,8 +70,8 @@
   
   .contactFormContainer {
     top: 1rem;
-    left: .5rem;
-    right: .5rem;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90%;
   }
 }

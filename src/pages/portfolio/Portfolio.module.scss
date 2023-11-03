@@ -88,8 +88,8 @@
 @media screen and (max-width: 600px) {
   .homeContainer {
     .linksContainer {
-      right: 1.5rem;
-      left: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
       width: 90%;
       flex-direction: row;
     }

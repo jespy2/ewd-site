@@ -101,18 +101,19 @@
 @media screen and (max-width: 830px) {
   .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
     top: 2rem;
-    left: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     height: 38rem;
     width: 25rem;
-    margin: 0 auto;
+    // margin: 0 auto;
     overflow-y: scroll;
   }
-  .resumeModal {
-    overflow-x: scroll;
-    img {
-      width: 50rem;
+    .resumeModal {
+      overflow-x: scroll;
+      img {
+        width: 50rem;
+      }
     }
-  }
   
   .greetingModal {
     top: 5rem;
@@ -124,10 +125,9 @@
 @media screen and (max-width: 600px) {
   .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
     top: 12rem;
-    left: 2rem;
     height: 70%;
     width: 90%;
-    margin: 0 auto;
+    // margin: 0 auto;
     overflow-y: scroll;
   }
   
