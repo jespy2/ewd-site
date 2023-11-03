@@ -71,7 +71,11 @@
       top: 2rem;
       left: 1rem;
       height: 20rem;
-      overflow: scroll;
+      .aboutInfoText {
+        height: 100%;
+        margin-bottom: 5px;
+        overflow: scroll;
+      }
     }
   }  
 }

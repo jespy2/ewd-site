@@ -62,7 +62,12 @@
         left: 10rem;
         height: 80%;
         width: 75%;
-        overflow: scroll;
+
+        .homeInfoText {
+          height: 100%;
+          margin-bottom: 5px;
+          overflow: scroll;
+        }
       }
     }    
   }
@@ -75,7 +80,6 @@
         left: 10rem;
         height: 80%;
         width: 75%;
-        overflow: scroll;
       }
     }    
   }
