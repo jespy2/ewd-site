@@ -8,15 +8,15 @@ import styles from './Footer.module.scss';
 export const Footer = ({ page }: {page: string}) => {
   return (
     <>
+    <Link href='/'>
       <Box className={styles.espylogo}>
-				<Link href='/'>
 					<EspyLogo />
-				</Link>
 				<Box className={styles.nameContainer}>
 					<Typography variant='h2'>james espy</Typography>
 					<Typography variant='h5'>SOFTWARE ENGINEER</Typography>
 				</Box>
 			</Box>
+				</Link>
 			<Box className={styles.navContainer}>
         {page === 'about'
           ? < Typography className={styles.navLink} variant='h6' sx={{ color: 'yellow' }} >

@@ -15,8 +15,7 @@ interface IProps {
 
 export const Modal = (props: IProps) => {
   const { modalProps, setOpenGreeting, setModalState } = props;
-  console.log(modalProps)
-
+  
   return (
     <Box className={styles[String(modalProps.class)]} >
       {modalProps.modal !== 'greeting' &&
