@@ -15,10 +15,12 @@ interface IProps {
 
 export const Modal = (props: IProps) => {
   const { modalProps, setOpenGreeting, setModalState } = props;
+  console.log(modalProps)
 
   return (
     <Box className={styles[String(modalProps.class)]} >
-      <Box
+      {modalProps.modal !== 'greeting' &&
+        <Box
         className={styles.closeContainer}
         onClick={() => {
           setModalState && setOpenGreeting(true)
@@ -27,6 +29,7 @@ export const Modal = (props: IProps) => {
       >
         <CloseIcon />
       </Box>
+      }
       {modalProps.children}
     </Box>
   );
