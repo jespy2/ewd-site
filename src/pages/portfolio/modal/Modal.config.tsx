@@ -97,7 +97,7 @@ export const modalConfig: IModalConfig = {
             <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
             Review the code and run the app on your machine (documentation and quick start guide in the README)
           </Link>
-          <Link
+          {/* <Link
             href='https://github.com/jespy2'
             variant='body2'
             target='_blank'
@@ -123,7 +123,7 @@ export const modalConfig: IModalConfig = {
               />
             </Box>
             Try out the app in your browser          
-          </Link>
+          </Link> */}
         </Box>
       </>
   },

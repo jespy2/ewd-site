@@ -86,9 +86,9 @@
 @media screen and (max-width: 1200px) {
   .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
     top: 2rem;
-    left: 2rem;
+    left: 12rem;
     height: 38rem;
-    width: 40rem;
+    width: 45rem;
     margin: 0 auto;
   }
   
@@ -108,8 +108,8 @@
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    height: 38rem;
-    width: 25rem;
+    height: 50rem;
+    width: 30rem;
   }
     .resumeModal {
       overflow-x: scroll;
