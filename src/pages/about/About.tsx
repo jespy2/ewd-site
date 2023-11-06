@@ -14,7 +14,7 @@ export const About = () => {
 	const screenIsSmall = screenSize.isSmall;
 
 	return (
-		<div className={styles.homeContainer}>
+		<div className={styles.aboutContainer}>
 			<HobbiesAccordian setInfoHidden={setInfoHidden} />
 			{(!screenIsSmall || showMore) && 
 				<Box
@@ -39,9 +39,12 @@ export const About = () => {
 							the code!
 						</Typography>
 						<br />
-						<Typography variant='button' className={styles.aboutReadMoreButton} onClick={() => setShowMore(!showMore)} >
-							show less
-						</Typography>
+						<br />
+            <Box className={styles.aboutReadMoreButtonContainer} >
+							<Typography variant='button' className={styles.aboutReadMoreButton} onClick={() => setShowMore(!showMore)} >
+								show less
+							</Typography>
+						</Box>
 					</Box>
 				</Box>
 			}
@@ -59,9 +62,12 @@ export const About = () => {
 							engineer.
 						</Typography>
 						<br />
-						<Typography variant='button' className={styles.aboutReadMoreButton} onClick={() => setShowMore(!showMore)} >
-							read more
-						</Typography>
+						<br />
+            <Box className={styles.aboutReadMoreButtonContainer} >
+							<Typography variant='button' className={styles.aboutReadMoreButton} onClick={() => setShowMore(!showMore)} >
+								read more
+							</Typography>
+						</Box>
 					</Box>
 				</Box>
 			)}
