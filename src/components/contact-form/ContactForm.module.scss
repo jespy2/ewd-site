@@ -57,12 +57,21 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (orientation: portrait) {
   .contactFormContainer {
     top: 1rem;
     left: 1rem;
     right: 1rem;
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .contactFormContainer {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: 65%;
   }
 }
 

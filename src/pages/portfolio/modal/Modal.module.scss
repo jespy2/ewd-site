@@ -98,7 +98,7 @@
   }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 830px) and (orientation: portrait) {
   .modalContent {
     overflow: scroll;
     height: 95%;
@@ -122,6 +122,33 @@
     top: 5rem;
     height: 10rem;
     width: 25rem;
+  }    
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .modalContent {
+    overflow: scroll;
+    height: 95%;
+    margin-bottom: 5px;
+  }
+  .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70%;
+    width: 60%;
+  }
+    .resumeModal {
+      overflow: scroll;
+      img {
+        width: 50rem;
+      }
+    }
+  
+  .greetingModal {
+    top: 5rem;
+    left: 50%;
+    height: fit-content;
   }    
 }
 

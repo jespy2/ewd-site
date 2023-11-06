@@ -34,14 +34,8 @@ export const ButtonPanel = (props: IProps) => {
 					setOpenCityPicker(false);
 				}}
 			>
-				<DescriptionTwoToneIcon
-					sx={{
-						height: "4rem",
-						width: "4rem",
-						color: "black",
-					}}
-				/>
-				<Typography variant='body2' color={"black"} fontSize={10}>
+				<DescriptionTwoToneIcon className={styles.resumeIcon} />
+				<Typography variant='body2' color={"black"} className={styles.resumeIconText} >
 					RESUME
 				</Typography>
 			</Box>

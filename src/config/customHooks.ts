@@ -9,3 +9,10 @@ export const useScreenSize = () => {
     isXLarge: useMediaQuery("(max-width:1536px)")
   };
 }	
+
+export const useScreenOrientation = () => {
+  return {
+    isLandscape: useMediaQuery("(orientation:landscape)"),
+    isPortrait: useMediaQuery("(orientation:portrait)")
+  };
+}

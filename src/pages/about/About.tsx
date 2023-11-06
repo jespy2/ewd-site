@@ -38,13 +38,14 @@ export const About = () => {
 							individual. Thanks for getting to know a bit more about me beyond
 							the code!
 						</Typography>
-						<br />
-						<br />
-            <Box className={styles.aboutReadMoreButtonContainer} >
-							<Typography variant='button' className={styles.aboutReadMoreButton} onClick={() => setShowMore(!showMore)} >
-								show less
-							</Typography>
-						</Box>
+            {screenIsSmall && <><br/><br /></>}
+						{screenIsSmall &&
+							<Box className={styles.aboutReadMoreButtonContainer} >
+								<Typography variant='button' className={styles.aboutReadMoreButton} onClick={() => setShowMore(!showMore)} >
+									show less
+								</Typography>
+							</Box>
+						}
 					</Box>
 				</Box>
 			}

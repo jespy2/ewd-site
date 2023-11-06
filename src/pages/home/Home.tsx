@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Link, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import { Footer } from '../../components/footer/Footer';
 import { useScreenSize } from '../../config/customHooks';
@@ -40,13 +40,14 @@ export const Home = () => {
             <Typography variant='body1' >
               In a rapidly evolving tech landscape, you need someone who can translate your vision into elegant, functional, and scalable solutions while seamlessly integrating with your business objectives. I'm that person, and I'm here to help your team shine. Let's create something incredible together.
             </Typography>
-            <br/>
-            <br />
-            <Box className={styles.homeReadMoreButtonContainer} sx={buttonBackgroundStyles}>
+            {screenIsSmall && <><br/><br /></>}
+            {screenIsSmall &&
+              <Box className={styles.homeReadMoreButtonContainer} sx={buttonBackgroundStyles}>
               <Typography variant='button' className={styles.homeReadMoreButton}  onClick={() => setShowMore(!showMore) } >
                 show less
               </Typography>
-            </Box>  
+            </Box>
+            }
           </Box>
         </Box>
       }

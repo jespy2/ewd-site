@@ -115,15 +115,33 @@
     .homeContainer {
     
       .homeInfoContainer {        
-        top: 1rem;
-        left: 10rem;
-        height: 80%;
+        top: 45%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        height: 70%;
+      }
+    }    
+  }
+
+  @media screen and (max-width: 900px) and (orientation: portrait) {
+    .homeContainer {
+    
+      .homeInfoContainer {     
+        width: 65%;
+      }
+    }    
+  }
+
+  @media screen and (max-width: 900px) and (orientation: landscape) {
+    .homeContainer {
+    
+      .homeInfoContainer {    
         width: 75%;
       }
     }    
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) and (orientation: portrait) {
     .homeContainer {
     
       .homeInfoContainer {
@@ -137,5 +155,20 @@
         padding: 1rem;
       }
     }    
-    
   }
+
+  // @media (orientation: landscape) {
+  //   .homeContainer {
+    
+  //     .homeInfoContainer {
+  //       top: unset;
+  //       left: 60%;
+  //       transform: translateX(-55%);
+  //       margin: .5rem auto;
+  //       height: 75%;
+  //       width: 80%;
+  //       font-size: 1.5rem;
+  //       padding: 1rem;
+  //     }
+  //   }    
+  // }
