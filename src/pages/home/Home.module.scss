@@ -10,10 +10,11 @@
 
   .homeInfoContainer {
     position: absolute;
-    top: 20%;
-    left: 20rem;
     height: fit-content;
-    width: 60%;
+    width: 60vw;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50% );
     text-align: left;
     border-radius: 15px;
     margin: 0 auto;
@@ -47,6 +48,10 @@
     -moz-animation: fadeIn 2s;
     -o-animation: fadeIn 2s;
     -ms-animation: fadeIn 2s;
+
+    .homeInfoText {
+      overflow: scroll;
+    }
   }
 
   .homeReadMoreButtonContainer {
