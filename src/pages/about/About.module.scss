@@ -135,6 +135,26 @@
   }  
 }
 
+@media screen and (max-height: 430px) and (orientation: landscape) {
+  
+  .aboutContainer {
+    .aboutInfoContainer {
+      position: absolute;
+      height: 45vh;
+      width: 45vw;
+      top: 2vh;
+      left: 15vw;
+      background-color: rgb(0,0,0,.4);
+
+      .aboutInfoText {
+        height: 100%;
+        margin-bottom: 5px;
+        overflow: scroll;
+      }
+    }
+  }     
+}
+
 @media screen and (max-width: 700px) {
   .aboutContainer {
     .aboutInfoContainer {
@@ -148,9 +168,9 @@
     .aboutInfoContainer {
       top: 60%;
       left: 50%;
-      transform: translate(-50%, -60%);
+      transform: translate(-50%, -50%);
       margin: .5rem auto;
-      height: fit-content;
+      height: 55vh;
       width: 85%;
       font-size: 1.5rem;
       padding: 1rem;     

@@ -67,6 +67,16 @@
   }
 }
 
+@media screen and (max-height: 430px) and (orientation: landscape) {
+  .contactFormContainer {
+    top: 45%;
+    left: 50%;
+    width: 60vw;
+    height: 80vh;
+    padding: .5rem;
+  }    
+}
+
 @media screen and (max-width: 600px) {
   
   .contactFormContainer {

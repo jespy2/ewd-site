@@ -118,6 +118,16 @@
   }      
 }
 
+@media screen and (max-height: 430px) and (orientation: landscape) {
+  .homeContainer {
+    .linksContainer {
+      .whiteLogoBkgrd {
+        margin: .5vw auto;
+      }
+    }
+  }      
+}
+
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .homeContainer {
     .linksContainer {
