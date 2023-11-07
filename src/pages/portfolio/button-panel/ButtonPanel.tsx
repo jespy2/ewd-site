@@ -53,7 +53,6 @@ export const ButtonPanel = (props: IProps) => {
 				<img
 					src={GomenuLogo}
 					alt='gomenu app'
-					style={{ width: "90%", height: "90%", margin: "5px auto" }}
 				/>
 			</Box>
 			<Box
@@ -69,7 +68,6 @@ export const ButtonPanel = (props: IProps) => {
 				<img
 					src={StorialLogo}
 					alt='storial app'
-					style={{ width: "90%", height: "90%", margin: "5px auto" }}
 				/>
 			</Box>
 			<Box
@@ -85,7 +83,6 @@ export const ButtonPanel = (props: IProps) => {
 				<img
 					src={CityPickerLogo}
 					alt='city picker app'
-					style={{ width: "90%", height: "90%", margin: "5px auto" }}
 				/>
 			</Box>
 		</Box>
