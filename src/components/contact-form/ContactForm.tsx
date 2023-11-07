@@ -1,14 +1,33 @@
-import React, { useRef, useState } from "react";
+import { MutableRefObject, useRef, useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
+import emailjs from "@emailjs/browser";
 
-import { sendEmail, contactFields } from "./ContactForm.config";
+import { ContactFields } from "./ContactForm.config";
 
 import styles from "./ContactForm.module.scss";
 
 export const ContactForm = () => {
 	const form = useRef(null);
-	const _current: string | HTMLFormElement = form.current!;
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const sendEmail = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_03qu7ep",
+        "template_r6tuo6d",
+        form.current!,
+        "KCCdjOFh_vB4JGzBC"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
 	return (
     <Box className={styles.contactFormContainer}>
@@ -23,14 +42,14 @@ export const ContactForm = () => {
           ref={form}
           onSubmit={
             (e) => {
-              sendEmail(e, _current)
+              sendEmail(e)
               setIsSubmitted(true)
               setTimeout(() => setIsSubmitted(false), 5000)
             }
           }
         >
 				<Box className={styles.contactForm}>
-					{contactFields}
+					<ContactFields form={form as JSX.IntrinsicAttributes & MutableRefObject<null>} />
             <Button type='submit' variant='outlined' sx={{marginTop: "2rem"}} >
 						Send
 					</Button>
