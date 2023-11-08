@@ -39,10 +39,13 @@
     }
 
     .homeInfoContent {
+      max-height: 50vh;
       display: flex;
       flex-direction: row;
+      overflow: scroll;
 
       .homeInfoContentText {
+        height: 100%;
         width: 80%;
         margin-right: 2rem;
       }
@@ -51,9 +54,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        min-height: 30vh;
         width: 20%;
         border-radius: 15px;
-        margin: 4rem 1rem;
+        margin: 0 1rem;
         filter: grayscale(100%)
       }
 
@@ -173,6 +177,43 @@
     
       .homeInfoContainer {    
         width: 75%;
+
+        h4 {
+          font-size: 1.5rem;
+        }
+
+        h5 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        .homeInfoContent {
+          max-height: 50vh;
+          display: flex;
+          flex-direction: row;
+          overflow: scroll;
+    
+          .homeInfoContentText {
+            height: 100%;
+            width: 80%;
+            margin-right: 2rem;
+          }
+          .profilePic {
+            background-image: url(../../images/pics/profile.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 30vh;
+            width: 20%;
+            border-radius: 15px;
+            margin: 0 1rem;
+            filter: grayscale(100%)
+          }
+    
+        }
       }
     }    
   }
