@@ -7,6 +7,11 @@
   min-width: 100%;
   min-height: 100%;
   position: fixed;
+  animation: fadeIn .5s;
+  -webkit-animation: fadeIn .5s;
+  -moz-animation: fadeIn .5s;
+  -o-animation: fadeIn .5s;
+  -ms-animation: fadeIn .5s;
 
   .linksContainer {
     position: absolute;
