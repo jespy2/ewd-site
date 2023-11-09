@@ -9,7 +9,7 @@
   border-radius: 15px;
   margin: 0 auto;
   font-size: 1.5rem;
-  background-color: rgb(0,0,0,.8);
+  background-color: rgb(0,0,0,.85);
   color: white;
   padding: 1rem;
   animation: fadeIn 2s;
@@ -54,6 +54,10 @@
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+}
+
+.greetingModal{  
+  background-color: rgb(0,0,0,.6);
 }
 
 .resumeModal {
@@ -135,5 +139,5 @@
   .greetingModal {
     height: 13rem;
     width: 90%;
-  }  
+  } 
 }

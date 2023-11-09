@@ -7,6 +7,8 @@ import StorialLogo from '../../../images/logos/storiallogo.png';
 import CityPickerLogo from '../../../images/logos/citypickerlogo.svg';
 import Resume from '../../../assets/resume.png'
 
+import styles from '../Portfolio.module.scss'
+
 export interface IModalProps {
   modal: string,
   class: string,
@@ -27,8 +29,8 @@ export const modalConfig: IModalConfig = {
     class: 'greetingModal',
     children:
       <>
-        <Typography variant='h4' >Welcome to my portfolio</Typography>
-        <Typography variant='body1' >I've been engineering for quite a while now.  Please use the buttons on the right to see some of my work and review my resume.</Typography><br />
+        <Typography variant='h2' >Check out my work</Typography>
+        <Typography variant='body1' >Use the buttons <span className={styles.smallScreenPrompt} >above</span> <span className={styles.largerScreenPrompt} >on the right</span> to see some of my work and review my resume.</Typography><br />
      
       </>
   },

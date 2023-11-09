@@ -34,10 +34,12 @@ export const ButtonPanel = (props: IProps) => {
 					setOpenCityPicker(false);
 				}}
 			>
-				<DescriptionTwoToneIcon className={styles.resumeIcon} />
-				<Typography variant='body2' color={"black"} className={styles.resumeIconText} >
-					RESUME
-				</Typography>
+				<Box className={styles.resumeLogo} >
+					<DescriptionTwoToneIcon className={styles.resumeIcon} />
+					<Typography variant='body2' color={"black"} className={styles.resumeIconText} >
+						RESUME
+					</Typography>
+				</Box>
 			</Box>
 
 			<Box

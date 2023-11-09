@@ -21,6 +21,7 @@ export const Portfolio = () => {
 
   return (
     <Box className={styles.homeContainer} >
+      <Box className={styles.homeBackgroundFilter} ></Box>
       {openGreeting &&
         <Modal modalProps={modalConfig.greeting} setOpenGreeting={setOpenGreeting} />
       }
