@@ -13,66 +13,69 @@
   -o-animation: fadeIn .5s;
   -ms-animation: fadeIn .5s;
 
-  .aboutInfoContainer {
+  .aboutSubContainer {
     position: absolute;
-    top: 2rem;
-    left: 25%;
-    height: fit-content;
-    width: 35vw;  
-    text-align: left;
-    border-radius: 15px;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    background-color: rgb(0,0,0,.6);
-    color: white;
-    padding: 1rem;
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
-  }
+    top: 42vh;
+    right: 5vw;
+    transform: translateY(-50%);
+    height: 80vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
 
-  .aboutReadMoreContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    margin: .5rem auto;
-    padding: 1rem;
-    width: 85%;
-    height: fit-content;
-    text-align: left;
-    border-radius: 15px;
-    margin: 0 auto;
-    background-color: rgb(0,0,0,.6);
-    color: white;
-    font-size: 1.5rem;
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
-  }
-
-  .aboutReadMoreButtonContainer {
-    position: absolute;
-    bottom: 0;
-    height: 3rem;
-    width: 85%;
-    padding: 3px;    
+    .aboutInfoContainer {
+      height: fit-content;
+      width: 40vw; 
+      text-align: left;
+      border-radius: 15px;
+      font-size: 1.5rem;
+      background-color: rgb(0,0,0,.6);
+      color: white;
+      padding: 1rem;
+      animation: fadeIn 2s;
+      -webkit-animation: fadeIn 2s;
+      -moz-animation: fadeIn 2s;
+      -o-animation: fadeIn 2s;
+      -ms-animation: fadeIn 2s;
     }
-
-  .aboutReadMoreButton {
-    position: absolute;
-    right: 0;
-    bottom: .75rem;
-    background-color: grey;
-    color: black;
-    padding: 3px;
-    border-radius: 5px;
+  
+    .aboutReadMoreContainer {
+      margin: .5rem auto;
+      padding: 1rem;
+      width: 85%;
+      height: fit-content;
+      text-align: left;
+      border-radius: 15px;
+      margin: 0 auto;
+      background-color: rgb(0,0,0,.6);
+      color: white;
+      font-size: 1.5rem;
+      animation: fadeIn 2s;
+      -webkit-animation: fadeIn 2s;
+      -moz-animation: fadeIn 2s;
+      -o-animation: fadeIn 2s;
+      -ms-animation: fadeIn 2s;
     }
+  
+    .aboutReadMoreButtonContainer {
+      height: 3rem;
+      width: 85%;
+      padding: 3px;    
+      }
+  
+    .aboutReadMoreButton {
+      // position: absolute;
+      // right: 0;
+      bottom: .75rem;
+      background-color: grey;
+      color: black;
+      padding: 3px;
+      border-radius: 5px;
+      }
+  
 
+  }
+  
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -99,86 +102,97 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .aboutContainer {
-    .aboutInfoContainer {
-      top: 2rem;
-      left: 5rem;
-      height: fit-content;
-      width: 48vw;  
-    }
-  }    
-}
-
-@media screen and (max-width: 900px) and (orientation: landscape) {
-  .aboutContainer {
-    .aboutInfoContainer {
-      top: 2rem;
-      left: 1rem;
-      height: 10rem;
-      .aboutInfoText {
-        height: 100%;
-        margin-bottom: 5px;
-        overflow: scroll;
+//  LANDSCAPE
+@media screen and (orientation: landscape)  {
+  @media screen and (max-width: 1300px) {
+    .aboutContainer {
+      .aboutInfoContainer {      
+        h5 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: .9rem;
+        }
       }
-    }
-  }  
-}
-
-@media screen and (max-width: 800px) and (orientation: portrait) {
-  .aboutContainer {
-    .aboutInfoContainer {
-      top: 2rem;
-      left: 1rem;
-      height: 20rem;
-      .aboutInfoText {
-        height: 100%;
-        margin-bottom: 5px;
-        overflow: scroll;
-      }
-    }
-  }  
-}
-
-@media screen and (max-height: 430px) and (orientation: landscape) {
+    }    
+  }
   
-  .aboutContainer {
-    .aboutInfoContainer {
-      position: absolute;
-      height: 45vh;
-      width: 45vw;
-      top: 2vh;
-      left: 15vw;
-      background-color: rgb(0,0,0,.4);
+  @media screen and (max-width: 1200px ) {
+    .aboutContainer {
+      .aboutInfoContainer {      
+        h5 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: .9rem;
+        }
+      }
+    }    
+  }
+  
+  @media screen and (max-width: 900px) {
+    .aboutContainer {
+      .aboutInfoContainer {
+        height: 10rem;
+  
+        br {
+          display: none;
+        }
+        .aboutInfoText {
+          height: 100%;
+          margin-bottom: 5px;
+          overflow: scroll;
+        }
+      }
+    }  
+  } 
+  
+  @media screen and (max-height: 430px) {
+    .aboutContainer {
+      .aboutInfoContainer {
+        width: 50vw !important;
+        padding: 5px !important;
+  
+        br {
+          display: none;
+        }
+        .aboutInfoText {
+          height: 100%;
+          margin-bottom: 5px;
+          overflow: scroll;
+          padding: .5rem;
+        }
+      }
+    }  
+  } 
+}
 
-      .aboutInfoText {
-        height: 100%;
-        margin-bottom: 5px;
-        overflow: scroll;
+
+//  PORTRAIT
+@media screen and (orientation: portrait) {
+  @media screen and (max-width: 700px){
+    .aboutContainer {
+      .aboutSubContainer {
+        top: 42vh;
+        right: unset;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        
+        .aboutInfoContainer {
+          width: unset;
+          height: fit-content;
+    
+          br {
+            display: none;
+          }
+        }
+        .aboutReadMoreContainer {
+          margin: unset;
+          width: unset;
+          height: fit-content;
+        }
       }
     }
-  }     
-}
-
-@media screen and (max-width: 700px) {
-  .aboutContainer {
-    .aboutInfoContainer {
-      width: 15rem;  
-    }
-  }  
-}
-
-@media screen and (max-width: 600px) {
-  .aboutContainer {
-    .aboutInfoContainer {
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: .5rem auto;
-      height: 55vh;
-      width: 85%;
-      font-size: 1.5rem;
-      padding: 1rem;     
-    }
-  }    
+  }
 }

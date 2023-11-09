@@ -42,7 +42,10 @@ export const Accordian = ({setInfoHidden}: {setInfoHidden: Dispatch<SetStateActi
 				<AccordionDetails>
 					<Card className={styles.hobbiesCard}>
             <CardMedia
-              sx={{ height: item.title === 'Martial Arts' ? 200 : 140 }}
+								sx={{
+									height: item.title === 'Martial Arts' ? "30vh" : "30vh",
+									backgroundPosition: item.title === 'Martial Arts' ? "unset" : "center"
+								}}
               image={item.image}
               title={item.imagetitle}
             />

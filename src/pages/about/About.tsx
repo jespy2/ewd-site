@@ -15,20 +15,21 @@ export const About = () => {
 
 	return (
 		<div className={styles.aboutContainer}>
+			<Box className={styles.aboutSubContainer} >
 			<HobbiesAccordian setInfoHidden={setInfoHidden} />
 			{(!screenIsSmall || showMore) && 
 				<Box
 					className={styles.aboutInfoContainer}
-					sx={{ display: infoHidden && screenIsSmall ? "none" : "block" }}
+					sx={{ display: infoHidden ? "none" : "block" }}
 				>
 					<Box className={styles.aboutInfoText}>
-						<Typography variant='h6' display='block'>
-							Welcome to the 'Hobbies' section of my portfolio site! Beyond the
+						<Typography variant='h5' display='block'>
+							Beyond the
 							world of coding, I'm a passionate individual with a diverse set of
 							interests that play a significant role in shaping me as a software
 							engineer.
 						</Typography>
-						<br />
+						<br className={styles.aboutInfoTextbreak} />
 						<Typography variant='body1'>
 							These hobbies aren't just pastimes; they're a part of who I am,
 							and they influence the way I approach software engineering. They
@@ -71,7 +72,8 @@ export const About = () => {
 						</Box>
 					</Box>
 				</Box>
-			)}
+				)}
+				</Box>
 			<Footer page='about' />
 		</div>
 	);

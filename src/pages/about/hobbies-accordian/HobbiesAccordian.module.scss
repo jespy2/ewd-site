@@ -1,8 +1,7 @@
 .hobbiesAccordianContainer {
-  width: 20rem;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+  width: 40vw;
+  margin-top: 5vh;
+  padding: 1rem;
   background-color: rgb(0,0,0,.6);
   border-radius: 15px;
   z-index: 50;
@@ -22,7 +21,7 @@
     }
     
     .accordianItemContent {
-      height: 8rem;
+      height: 10vh;
       overflow: scroll;
     }
   }
@@ -69,49 +68,89 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+//  LANDSCAPE
+@media screen and (orientation: landscape) {  
+  @media screen and (max-width: 1300px) {
+    .hobbiesAccordianContainer {
+      .HobbiesAccordianItem {   
+        .hobbiesCard > [role = "img"] {
+          height: 27vh;
+        }   
+        .accordianItemContent {
+          height: 15vh;
+          p {
+            font-size: .8rem;}
+        }
+      }
+    }     
+  }
+
+  @media screen and (max-height: 650px) {    
+      .HobbiesAccordianItem > [role = "button"] {  
+        min-height: unset;
+        height: 2rem;
+        overflow: scroll;
+      }      
+    }  
     
-}
-
-@media screen and (max-width: 900px) {
-  .hobbiesAccordianContainer {
-    width: 18rem;
-    top: 2rem;
-    right: 1rem;
-    z-index: 50;
-
-    .HobbiesAccordianItem {      
-      .accordianItemContent {
-        height: 8rem;
-        overflow: scroll;
-      }
+    @media screen and (max-width: 600px) {
+      .hobbiesAccordianContainer {
+        width: 90%;
+        z-index: 50;
+    
+        .HobbiesAccordianItem {      
+          .accordianItemContent {
+            height: 8rem;
+            overflow: scroll;
+          }
+        }
+      }  
     }
-  }    
-}
-
-@media screen and (max-height: 430px) and (orientation: landscape) {
-  .hobbiesAccordianContainer {
-    width: 30vw;
-    top: 2vh;
-    right: 1%;
-    z-index: 50;
-    background-color: rgb(0,0,0,.4);
-  }     
-}
-
-@media screen and (max-width: 600px) {
-  .hobbiesAccordianContainer {
-    width: 90%;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 50;
-
-    .HobbiesAccordianItem {      
-      .accordianItemContent {
-        height: 8rem;
-        overflow: scroll;
-      }
+    
+    @media screen and (max-height: 430px) {
+      .hobbiesAccordianContainer {
+        width: 50vw;
+        padding: 5px;
+  
+        .HobbiesAccordianItem {   
+          height: fit-content;
+          .hobbiesCard > [role = "img"] {
+            height: 30vh;
+          }   
+          [role = "button"]  {
+            min-height: unset;
+            height: 7vh;
+          }
+          .accordianItemContent {
+            height: 10vh;
+            p {
+              font-size: .8rem;}
+          }
+        }
+      }  
     }
-  }  
+  }
+  
+//  PORTRAIT
+@media screen and (orientation: portrait) {      
+  @media screen and (max-width: 700px) {
+    .hobbiesAccordianContainer {
+      width: unset;
+      z-index: 50;
+  
+      .HobbiesAccordianItem {  
+        .hobbiesCard > [role = "img"] {
+          height: 20vh;
+        }   
+        [role = "button"]  {
+          min-height: unset;
+          height: 5vh;
+        }    
+        .accordianItemContent {
+          height: 8rem;
+          overflow: scroll;
+        }
+      }
+    }  
+  }
 }
