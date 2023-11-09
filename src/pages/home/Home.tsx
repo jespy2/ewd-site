@@ -21,8 +21,8 @@ export const Home = () => {
 	return (
     <div className={styles.homeContainer}>
 			{(!screenIsSmall || showMore) && (
-				<Box className={styles.homeInfoContainer}>
-					<Box className={styles.homeInfoText}>
+				<Box className={styles.homeInfoModal}>
+					<Box className={styles.homeInfoContainer}>
 						<Typography variant='h4' display='block'>
               FULL-STACK ENGINEER,
               <br />
@@ -33,8 +33,8 @@ export const Home = () => {
             I'm a product-focused software engineer with a passion for crafting exceptional user experiences through full-stack development. 
 						</Typography>
               <br />
-            <Box className={styles.homeInfoContent}>
-              <Box className={styles.homeInfoContentText}>
+            <Box className={styles.homeInfoBodyContainer}>
+              <Box className={styles.homeInfoBodyText}>
                 <Typography variant='body1' display='block'>
                   I build captivating front-end applications
                   that not only look great but also function seamlessly because they
@@ -98,7 +98,7 @@ export const Home = () => {
 
 			{screenIsSmall && !showMore && (
 				<Box className={styles.homeReadMoreContainer}>
-					<Box className={styles.homeInfoText}>
+					<Box className={styles.homeReadMoreText}>
 						<Typography variant='h6' display='block'>
 							Welcome to my site. I'm a seasoned software engineer with a
 							passion for crafting exceptional user experiences through

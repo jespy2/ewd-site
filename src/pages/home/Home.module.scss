@@ -13,7 +13,9 @@
   -o-animation: fadeIn .5s;
   -ms-animation: fadeIn .5s;
 
-  .homeInfoContainer {
+  .homeInfoModal {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     height: fit-content;
     width: 70vw;
@@ -38,23 +40,27 @@
       margin: 1rem 0;
     }
 
-    .homeInfoContent {
-      max-height: 50vh;
+    .homeInfoBodyContainer {
+      position: relative;
       display: flex;
       flex-direction: row;
+      max-height: 50vh;
       overflow: scroll;
 
-      .homeInfoContentText {
+      .homeInfoBodyText {
         height: 100%;
-        width: 80%;
+        width: 70%;
         margin-right: 2rem;
       }
       .profilePic {
+        position: sticky;
+        top: 0;
+        right: 1rem;
         background-image: url(../../images/pics/profile.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 30vh;
+        height: 35vh;
         width: 20%;
         border-radius: 15px;
         margin: 0 1rem;
@@ -84,7 +90,7 @@
     -o-animation: fadeIn 2s;
     -ms-animation: fadeIn 2s;
 
-    .homeInfoText {
+    .homeInfoContainer {
       overflow: scroll;
     }
   }
@@ -107,42 +113,44 @@
     border-radius: 5px;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    @-moz-keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    @-webkit-keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    @-o-keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    @-ms-keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
 
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}
+
+// LANDSCAPE
+@media screen and (orientation: landscape) {
   @media screen and (max-width: 1200px) {
     .homeContainer {
     
-      .homeInfoContainer {        
+      .homeInfoModal {        
         top: 1rem;
         left: 10rem;
         height: 80%;
         width: 75%;
 
-        .homeInfoText {
+        .homeInfoContainer {
           height: 100%;
           margin-bottom: 5px;
           overflow: scroll;
@@ -152,30 +160,12 @@
   }
 
   @media screen and (max-width: 900px) {
-    .homeContainer {
-    
-      .homeInfoContainer {        
+    .homeContainer {    
+      .homeInfoModal {        
         top: 45%;
         left: 60%;
         transform: translate(-50%, -50%);
         height: 70%;
-      }
-    }    
-  }
-
-  @media screen and (max-width: 900px) and (orientation: portrait) {
-    .homeContainer {
-    
-      .homeInfoContainer {     
-        width: 65%;
-      }
-    }    
-  }
-
-  @media screen and (max-width: 900px) and (orientation: landscape) {
-    .homeContainer {
-    
-      .homeInfoContainer {    
         width: 75%;
 
         h4 {
@@ -190,46 +180,82 @@
           font-size: 1rem;
         }
 
-        .homeInfoContent {
+        .homeInfoBodyContainer {
           max-height: 50vh;
+          position: relative;
           display: flex;
           flex-direction: row;
           overflow: scroll;
     
-          .homeInfoContentText {
+          .homeInfoBodyText {
             height: 100%;
             width: 80%;
             margin-right: 2rem;
           }
           .profilePic {
-            background-image: url(../../images/pics/profile.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            right: 1rem;
             min-height: 30vh;
             width: 20%;
-            border-radius: 15px;
-            margin: 0 1rem;
-            filter: grayscale(100%)
-          }
-    
+          }  
         }
       }
     }    
   }
-  
-  @media screen and (max-width: 600px) and (orientation: portrait) {
-    .homeContainer {
-    
-      .homeInfoContainer {
+}
+
+// PORTRAIT
+@media screen and (orientation: portrait) {
+  @media screen and (max-width: 900px) and (orientation: portrait) {
+    .homeContainer {    
+      .homeInfoModal {     
+        width: 65%;
+      }
+    }    
+  }
+
+  @media screen and (max-width: 600px) {
+    .homeContainer {    
+      .homeInfoModal {
         top: unset;
         left: 50%;
         transform: translateX(-50%);
         margin: .5rem auto;
-        height: 85%;
-        width: 85%;
+        height: 85vh;
+        width: 100vw;
         font-size: 1.5rem;
-        padding: 1rem;
+
+        .homeInfoContainer{
+          padding: 1rem;
+
+          .homeInfoBodyContainer {
+            max-height: 35vh;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            overflow: scroll;
+      
+            .homeInfoBodyText {
+              height: 100%;
+              width: 50%;
+            }
+            .profilePic {
+              right: 1rem;
+              height: 20vh;
+              width: 40%;
+            }  
+          }
+        }
+        .homeReadMoreButtonContainer {
+          width: 100vw;
+          height: 3rem;
+          .homeReadMoreButton {
+            margin-right: 2rem;
+          }
+        }
       }
     }    
   }
+}
+
+
+
