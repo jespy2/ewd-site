@@ -89,7 +89,6 @@
       .HobbiesAccordianItem > [role = "button"] {  
         min-height: unset;
         height: 2rem;
-        overflow: scroll;
       }      
     }  
     
@@ -106,10 +105,35 @@
         }
       }  
     }
+
+    @media screen and (max-height: 600px){
+      .hobbiesAccordianContainer {
+        width: 40vw;
+        padding: 5px;
+        margin: 0;
+  
+        .HobbiesAccordianItem {   
+          height: fit-content;
+          .hobbiesCard > [role = "img"] {
+            height: 30vh;
+          }   
+          [role = "button"]  {
+            min-height: unset;
+            height: 7vh;
+          }
+          .accordianItemContent {
+            height: 10vh;
+            p {
+              font-size: .8rem;}
+          }
+        }
+      } 
+
+    }
     
     @media screen and (max-height: 430px) {
       .hobbiesAccordianContainer {
-        width: 50vw;
+        width: 45vw;
         padding: 5px;
   
         .HobbiesAccordianItem {   
