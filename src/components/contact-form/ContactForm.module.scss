@@ -58,32 +58,30 @@
   }
 }
 
-@media screen and (max-width: 900px) and (orientation: portrait) {
-  .contactFormContainer {
-    top: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: 90%;
+// LANDSCAPE
+@media screen and (orientation: landscape) {
+  @media screen and (max-height: 430px) {
+    .contactFormContainer {
+      top: 40%;
+      width: 60vw;
+      height: 70vh;
+      padding: .5rem;
+    }    
   }
 }
 
-@media screen and (max-height: 430px) and (orientation: landscape) {
-  .contactFormContainer {
-    top: 45%;
-    left: 50%;
-    width: 60vw;
-    height: 80vh;
-    padding: .5rem;
-  }    
-}
+// PORTRAIT
+@media screen and (orientation: portrait) {
+  @media screen and (max-width: 900px) {
+    .contactFormContainer {
+      width: 70%;
+    }
+  }
 
-@media screen and (max-width: 600px) {
-  
-  .contactFormContainer {
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+  @media screen and (max-width: 600px) { 
+    .contactFormContainer {
+      top: 40%;
+      width: 90%;
+    }
   }
 }
-
