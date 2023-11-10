@@ -32,7 +32,7 @@ export const Home = () => {
 						<Typography variant='h5' display='block'>
             I'm a product-focused software engineer with a passion for crafting exceptional user experiences through full-stack development. 
 						</Typography>
-              <br />
+              <br className={styles.titleLineBreak} />
             <Box className={styles.homeInfoBodyContainer}>
               <Box className={styles.homeInfoBodyText}>
                 <Typography variant='body1' display='block'>

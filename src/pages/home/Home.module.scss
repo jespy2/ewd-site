@@ -13,6 +13,18 @@
   -o-animation: fadeIn .5s;
   -ms-animation: fadeIn .5s;
 
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: white;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(0,0,0,.1);
+  }
+
   .homeInfoModal {
     display: flex;
     flex-direction: column;
@@ -49,7 +61,7 @@
       .homeInfoBodyText {
         width: 70%;
         margin-right: 2rem;
-        overflow: scroll;
+        overflow-y: scroll;
       }
 
       .profilePic {
@@ -167,6 +179,34 @@
 
         h5 {
           font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }    
+  }
+
+  @media screen and (max-height: 400px) {
+    .homeContainer {    
+      .homeInfoModal {   
+        height: 64vh;
+        .homeInfoDivider {
+          margin: .5rem 0;
+        }
+
+        .titleLineBreak {
+          display: none;
+        }
+        h4 {
+          font-size: 1.5rem;
+        }
+
+        h5 {
+          font-size: 1.2rem;
+          line-height: unset;
+          margin-bottom: 7px;
         }
 
         p {
