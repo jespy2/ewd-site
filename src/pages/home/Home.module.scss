@@ -45,17 +45,16 @@
       display: flex;
       flex-direction: row;
       max-height: 50vh;
-      overflow: scroll;
 
       .homeInfoBodyText {
-        height: 100%;
         width: 70%;
         margin-right: 2rem;
+        overflow: scroll;
       }
+
       .profilePic {
         position: sticky;
         top: 0;
-        right: 1rem;
         background-image: url(../../images/pics/profile.jpg);
         background-position: center;
         background-repeat: no-repeat;
@@ -63,12 +62,11 @@
         height: 35vh;
         width: 20%;
         border-radius: 15px;
-        margin: 0 1rem;
         filter: grayscale(100%)
       }
-
     }
   }
+  
   .homeReadMoreContainer {
     position: absolute;
     top: 50%;
@@ -89,10 +87,6 @@
     -moz-animation: fadeIn 2s;
     -o-animation: fadeIn 2s;
     -ms-animation: fadeIn 2s;
-
-    .homeInfoContainer {
-      overflow: scroll;
-    }
   }
 
   .homeReadMoreButtonContainer {
@@ -142,32 +136,31 @@
 // LANDSCAPE
 @media screen and (orientation: landscape) {
   @media screen and (max-width: 1200px) {
-    .homeContainer {
-    
-      .homeInfoModal {        
-        top: 1rem;
-        left: 10rem;
-        height: 80%;
-        width: 75%;
+    .homeContainer {    
+      .homeInfoModal {
+        height: 70vh;
+        width: 75vw;
 
         .homeInfoContainer {
-          height: 100%;
-          margin-bottom: 5px;
-          overflow: scroll;
+          height: 31vh;
+
+          .homeInfoBodyContainer {
+            .homeInfoBodyText {
+              height: 32vh;
+              width: 80%;
+            }
+            .profilePic {
+              height: 32vh;
+            }  
+          }
         }
       }
     }    
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-height: 600px) {
     .homeContainer {    
       .homeInfoModal {        
-        top: 45%;
-        left: 60%;
-        transform: translate(-50%, -50%);
-        height: 70%;
-        width: 75%;
-
         h4 {
           font-size: 1.5rem;
         }
@@ -178,25 +171,6 @@
 
         p {
           font-size: 1rem;
-        }
-
-        .homeInfoBodyContainer {
-          max-height: 50vh;
-          position: relative;
-          display: flex;
-          flex-direction: row;
-          overflow: scroll;
-    
-          .homeInfoBodyText {
-            height: 100%;
-            width: 80%;
-            margin-right: 2rem;
-          }
-          .profilePic {
-            right: 1rem;
-            min-height: 30vh;
-            width: 20%;
-          }  
         }
       }
     }    
@@ -229,18 +203,13 @@
 
           .homeInfoBodyContainer {
             max-height: 35vh;
-            position: relative;
-            display: flex;
-            flex-direction: row;
             overflow: scroll;
       
             .homeInfoBodyText {
-              height: 100%;
               width: 50%;
             }
             .profilePic {
-              right: 1rem;
-              height: 20vh;
+              height: 30vh;
               width: 40%;
             }  
           }
