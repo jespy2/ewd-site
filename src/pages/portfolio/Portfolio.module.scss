@@ -142,8 +142,27 @@
       h2 {
         font-size: 2.5rem;
       }
+
+      p {
+        font-size: .7rem;
+      }
+
       .linksContainer {
         min-height: 17rem;
+        .whiteLogoBkgrd {
+          margin: .5vw auto;
+        }
+      }
+    }      
+  }
+
+  @media screen and (max-height: 430px) {
+    .homeContainer {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .linksContainer {
+        min-height: 15rem;
         .whiteLogoBkgrd {
           margin: .5vw auto;
         }

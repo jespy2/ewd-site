@@ -133,6 +133,15 @@
       left: 50%;
     }
   }
+
+  @media screen and (max-height: 430px) {
+    .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
+      padding: 5px;
+      .modalContent {
+        height: 57vh;
+      }
+    }
+  }
 }
 
 // PORTRAIT
