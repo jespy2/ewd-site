@@ -1,13 +1,16 @@
 import React, { ReactNode } from 'react';
 import { Box, Link, Typography } from '@mui/material';
+import { Document, Page, pdfjs } from 'react-pdf';
 
 import GithubLogo from '../../../images/logos/github.png';
 import GoMenuLogo from '../../../images/logos/gomenulogo.svg';
 import StorialLogo from '../../../images/logos/storiallogo.png';
 import CityPickerLogo from '../../../images/logos/citypickerlogo.svg';
-import Resume from '../../../assets/resume.png'
+import Resume from '../../../assets/resume.pdf'
 
 import styles from '../Portfolio.module.scss'
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 export interface IModalProps {
   modal: string,
@@ -37,7 +40,19 @@ export const modalConfig: IModalConfig = {
   resume: {
     modal: 'resume',
     class: 'resumeModal',
-    children: <img src={Resume} alt="resume" />
+    children:
+      <Document
+        file={Resume} 
+        renderMode="canvas"
+        className="w-full relative"
+      >
+        <Page
+          pageNumber={1}
+          scale={1.0}            
+          renderAnnotationLayer={false} 
+          renderTextLayer={false}
+        />
+      </Document>   
   },
   gomenu: {
     modal: 'gomenu',

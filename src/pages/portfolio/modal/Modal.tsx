@@ -5,6 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { IModalProps } from "./Modal.config";
 
 import styles from "./Modal.module.scss";
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
 interface IProps {
 	modalProps: IModalProps;
