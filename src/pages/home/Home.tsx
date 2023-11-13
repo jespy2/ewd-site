@@ -99,10 +99,14 @@ export const Home = () => {
 			{screenIsSmall && !showMore && (
 				<Box className={styles.homeReadMoreContainer}>
 					<Box className={styles.homeReadMoreText}>
+					<Typography variant='h5' display='block'>
+              FULL-STACK ENGINEER,
+              <br />
+              JAVASCRIPT SPECIALIST & UI NERD
+            </Typography>
+            <Divider variant="middle" className={styles.homeInfoDivider} />
 						<Typography variant='h6' display='block'>
-							Welcome to my site. I'm a seasoned software engineer with a
-							passion for crafting exceptional user experiences through
-							full-stack development.
+            I'm a product-focused software engineer with a passion for crafting exceptional user experiences through full-stack development. 
 						</Typography>
 						<br />
 						<br />

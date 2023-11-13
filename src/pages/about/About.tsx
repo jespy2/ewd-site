@@ -58,10 +58,7 @@ export const About = () => {
 				>
 					<Box className={styles.aboutInfoText}>
 						<Typography variant='h6' display='block'>
-							Welcome to the 'Hobbies' section of my portfolio site! Beyond the
-							world of coding, I'm a passionate individual with a diverse set of
-							interests that play a significant role in shaping me as a software
-							engineer.
+						Beyond the world of coding, I'm a passionate individual with a diverse set of interests that play a significant role in shaping me as a software engineer.
 						</Typography>
 						<br />
 						<br />
