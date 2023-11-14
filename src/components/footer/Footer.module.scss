@@ -36,7 +36,7 @@
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1900px) {
   .espylogo {
     width: 12rem;
     height: 12rem;
@@ -126,4 +126,42 @@
     font-size: .8rem;
   }
 }
+}
+
+@media screen and (orientation: landscape) {
+  @media screen and (max-height: 930px) {
+    .espylogo {
+      display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 8rem;
+        height: 3rem;
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
+    
+      .nameContainer {
+        margin-top: .1rem;
+        h2 {
+          font-size: 1rem;
+        }
+        h5 {
+          font-size: .5rem;
+        }
+      }
+    }
+    .navContainer {
+      width: 60vw;
+      bottom: .5rem;
+      right: .5rem;
+      text-align: right;
+      h6 {
+        font-size: .8rem;
+      }
+      a {
+        font-size: .8rem;
+      }
+    }
+  }
 }
