@@ -15,58 +15,60 @@
 
   .linksContainer {
     position: absolute;
-    top: 10rem;
+    top: 50%;
     right: 2rem;
-    width: 10rem;
+    transform: translateY(-50%);
+    width: 5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     a {
       padding: 1rem;
     }
     img {
-      width: 5rem;
-      height: 5rem;
+      width: 3rem;
+      height: 3rem;
     }
   }
 }
 
 // LANDSCAPE
 @media screen and (orientation: landscape) {
-  @media screen and (max-width: 1200px) {
-    .contactContainer {  
-      .linksContainer {
-        right: 1rem;
-        width: 7rem;
-      }
-    }
-  }
+  // @media screen and (max-width: 1200px) {
+  //   .contactContainer {  
+  //     .linksContainer {
+  //       right: 1rem;
+  //       width: 7rem;
+  //     }
+  //   }
+  // }
 
-  @media screen and (max-width: 900px) {
-    .contactContainer {  
-      .linksContainer {
-        top: 2rem;
-        width: 5rem;
+  // @media screen and (max-width: 1200px) {
+  //   .contactContainer {  
+  //     .linksContainer {
+  //       // top: 2rem;
+  //       width: 5rem;
   
-        img {
-          width: 3rem;
-          height: 3rem;
-          padding: 0;
-          margin: 0;
-        }
+  //       img {
+  //         width: 3rem;
+  //         height: 3rem;
+  //         padding: 0;
+  //         margin: 0;
+  //       }
     
-        a {
-          width: 3rem;
-          height: 3rem;
-          margin: 0;
-        }
-      }
-    }
-  }
+  //       a {
+  //         width: 3rem;
+  //         height: 3rem;
+  //         margin: 0;
+  //       }
+  //     }
+  //   }
+  // }
 
   @media screen and (max-height: 430px) {
     .contactContainer {  
       .linksContainer {
-        top: 2rem;
+        top: 40%;
         right: 1rem;
         width: 5rem;
   
@@ -96,7 +98,7 @@
         top: unset;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 8rem;
+        bottom: 5rem;
         width: 10rem;
         justify-content: center;
     

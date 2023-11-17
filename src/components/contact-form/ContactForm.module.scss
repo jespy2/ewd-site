@@ -21,6 +21,12 @@
   .contactForm {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+
+    & > button {
+      flex-grow: 2;
+      height: 40%;
+    }
   }
 
   .thankyouMessage {
@@ -60,11 +66,33 @@
 
 // LANDSCAPE
 @media screen and (orientation: landscape) {
+  @media screen and (max-height: 700px) {
+    .contactFormContainer {
+      // width: 60vw;
+      height: fit-content;
+      // padding: .5rem;
+    }    
+    .contactForm > div > div > input {
+      padding-top: 5px;
+    }
+  }
+  
+  @media screen and (max-height: 530px) {
+    .contactFormContainer {
+      // width: 60vw;
+      height: fit-content;
+      // padding: .5rem;
+    }    
+    .contactForm > div > div > input {
+      padding-top: 5px;
+    }
+  }
+
   @media screen and (max-height: 430px) {
     .contactFormContainer {
       top: 40%;
       width: 60vw;
-      height: 70vh;
+      height: fit-content;
       padding: .5rem;
     }    
     .contactForm > div > div > input {
