@@ -22,7 +22,7 @@
     
     .accordianItemContent {
       height: 10vh;
-      overflow: scroll;
+      overflow-y: scroll;
     }
   }
 
@@ -100,7 +100,6 @@
         .HobbiesAccordianItem {      
           .accordianItemContent {
             height: 8rem;
-            overflow: scroll;
           }
         }
       }  
@@ -172,7 +171,6 @@
         }    
         .accordianItemContent {
           height: 8rem;
-          overflow: scroll;
         }
       }
     }  
