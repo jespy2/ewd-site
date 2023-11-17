@@ -25,7 +25,7 @@
   .portfolioSidebar {
     position: absolute;
     top: 4vh;
-    left: 2vw;
+    left: 5vw;
     transform: rotate(-5deg) skew(-5deg);
     width: 13vw;
     border-radius: 15px;
@@ -177,7 +177,7 @@
 
   @media screen and (max-width: 1450px){
     .portfolioSidebar {
-      min-width: 18vw;
+      min-width: 15vw;
     }
   }
 
