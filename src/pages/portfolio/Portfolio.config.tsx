@@ -32,11 +32,12 @@ export const itemData = [
         <Typography variant='body1' >I used Figma for wireframing, Inkskape for icons and logos, and built a Jira board to track tasks and progress, along with managing deadlines. The frontend is built in React/Typescript and styled with SCSS and Material UI.  I built the server using Node/Express, which handles the CRUD functionality and webscraping.  I applied cloudbased MongoDB for the database.  Search and filtering is handled by Atlas search and server-side middleware.</Typography><br />
         <Typography variant='body1' >This project should be ready for MVP release very soon, and I have a roadmap for adding features and quality of life updates soon after.</Typography><br />
         <Box >
-          <Link href='https://github.com/jespy2/gomenu' variant='body2' target='_blank' underline='none' color='yellow'>
+          <Link className={styles.portfolioLinks} href='https://github.com/jespy2/gomenu' variant='body2' target='_blank' underline='none' color='yellow'>
             <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
             Review the code
           </Link>
           <Link
+            className={styles.portfolioLinks} 
             href='https://github.com/jespy2'
             variant='body2'
             target='_blank'
@@ -81,7 +82,7 @@ export const itemData = [
         <Typography variant='body1' >Because this was a frontend-only role, I was only tasked with building the UI, but decided to build a fullstack app so that the reviewing team could punch through the final product.  I started with a using Adobe products to build the branding package, including name, logo, color palate and wireframing.  The frontend was in React, and I took the opportunity to try out Tailwind.css (which I enjoyed and ended up using quite a bit in my new role).  The backend was built with Node/Express and MongoDB. </Typography><br />
         <Typography variant='body1' >Since this was a takehome assessment, I had only a few days to go from design to prod.</Typography><br />
         <Box >
-          <Link href='https://github.com/jespy2/storial' variant='body2' target='_blank' underline='none' color='yellow'>
+          <Link className={styles.portfolioLinks} href='https://github.com/jespy2/storial' variant='body2' target='_blank' underline='none' color='yellow'>
             <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
             Review the code and run the app on your machine (documentation and quick start guide in the README)
           </Link>
@@ -109,12 +110,13 @@ export const itemData = [
         <Typography variant='body1' >A quick note on UX: In designing the sliders for selecting variable ranges, I intentionally left out quantifying feedback like tick markers or popups on the handles that gave a specific number or party range. I wanted it to be more a "feel" experience than a "think" experience.</Typography><br />
         <Box>
           <Box >
-          <Link href='https://github.com/jespy2/CityPicker' variant='body2' target='_blank' underline='none' color='yellow'>
+          <Link className={styles.portfolioLinks} href='https://github.com/jespy2/CityPicker' variant='body2' target='_blank' underline='none' color='yellow'>
             <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
             Review the code and run the app on your machine (documentation README)
           </Link>
           <Link
             href='https://espywebdesign.com/reactApps/citypicker/index.html'
+            className={styles.portfolioLinks} 
             variant='body2'
             target='_blank'
             underline='none'
@@ -157,7 +159,7 @@ export const itemData = [
         </Typography><br />
         <Typography variant='body1' >This was a great opportunity to work with some awesome engineers that allowed me to focus on the backend.  My contribution was adding some fun algorithms and data structures, as well as basic routing to the server-side middleware.</Typography><br />
         <Box >
-          <Link href='https://github.com/oslabs-beta/redis-hawk/tree/main' variant='body2' target='_blank' underline='none' color='yellow'>
+          <Link className={styles.portfolioLinks} href='https://github.com/oslabs-beta/redis-hawk/tree/main' variant='body2' target='_blank' underline='none' color='yellow'>
             <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
             Review the code
           </Link>
