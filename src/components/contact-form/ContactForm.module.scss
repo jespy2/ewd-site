@@ -68,9 +68,7 @@
 @media screen and (orientation: landscape) {
   @media screen and (max-height: 700px) {
     .contactFormContainer {
-      // width: 60vw;
       height: fit-content;
-      // padding: .5rem;
     }    
     .contactForm > div > div > input {
       padding-top: 5px;
@@ -79,9 +77,7 @@
   
   @media screen and (max-height: 530px) {
     .contactFormContainer {
-      // width: 60vw;
       height: fit-content;
-      // padding: .5rem;
     }    
     .contactForm > div > div > input {
       padding-top: 5px;
