@@ -6,12 +6,12 @@
   width: 50vw;
   @include center-x-y;
   text-align: left;
-  border-radius: 15px;
+  border-radius: $radius-large;
   margin: 0 auto;
-  font-size: 1.5rem;
-  background-color: rgb(0,0,0,.6);
-  color: white;
-  padding: 1rem;
+  font-size: $font-xl;
+  background-color: $black-opacity-medium;
+  color: $white;
+  padding: $space-6;
   @include fade-in($transition-slow);
   .contactForm {
     @include flex-column-center;
@@ -36,7 +36,7 @@
       height: fit-content;
     }    
     .contactForm > div > div > input {
-      padding-top: 5px;
+      padding-top: $space-3;
     }
   }
   
@@ -45,7 +45,7 @@
       height: fit-content;
     }    
     .contactForm > div > div > input {
-      padding-top: 5px;
+      padding-top: $space-3;
     }
   }
 
@@ -54,10 +54,10 @@
       top: 40%;
       width: 60vw;
       height: fit-content;
-      padding: .5rem;
+      padding: $space-4;
     }    
     .contactForm > div > div > input {
-      padding-top: 5px;
+      padding-top: $space-3;
     }
   }
 }

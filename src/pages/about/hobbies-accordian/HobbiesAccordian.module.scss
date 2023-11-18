@@ -3,19 +3,19 @@
 .hobbiesAccordianContainer {
   width: 40vw;
   margin-top: 5vh;
-  padding: 1rem;
-  background-color: rgb(0,0,0,.6);
-  border-radius: 15px;
+  padding: $space-6;
+  background-color: $black-opacity-medium;
+  border-radius: $radius-large;
   z-index: 50;
   @include fade-in($transition-fast);
   @include scrollbar;
 
   .HobbiesAccordianItem {
-    background-color: rgb(0, 0, 0, .01);
+    background-color: $black-opacity-light;
     text-align: left;
 
     .hobbiesCard {
-      background-color: rgb(0, 0, 0, .01);
+      background-color: $black-opacity-dark;
       text-align: left;
     }
     
@@ -26,19 +26,19 @@
   }
 
   .HobbiesAccordianItem:first-of-type {
-    background-color: rgb(0, 0, 0, .01);
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    background-color: $black-opacity-light;
+    border-top-right-radius: $radius-large;
+    border-top-left-radius: $radius-large;
   }
   
   .HobbiesAccordianItem:last-of-type {
-    background-color: rgb(0, 0, 0, .01);
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+    background-color: $black-opacity-light;
+    border-bottom-right-radius: $radius-large;
+    border-bottom-left-radius: $radius-large;
   }
 
   div > * {
-    color: white;
+    color: $white;
   }
 }
 
@@ -53,7 +53,7 @@
         .accordianItemContent {
           height: 15vh;
           p {
-            font-size: .8rem;}
+            font-size: $font-sm;}
         }
       }
     }     
@@ -82,8 +82,8 @@
     @media screen and (max-height: 600px){
       .hobbiesAccordianContainer {
         width: 40vw;
-        padding: 5px;
-        margin: 0;
+        padding: $space-3;
+        margin:  $space-0;
   
         .HobbiesAccordianItem {   
           height: fit-content;
@@ -97,7 +97,7 @@
           .accordianItemContent {
             height: 10vh;
             p {
-              font-size: .8rem;}
+              font-size: $font-sm;}
           }
         }
       } 
@@ -107,7 +107,7 @@
     @media screen and (max-height: 430px) {
       .hobbiesAccordianContainer {
         width: 45vw;
-        padding: 5px;
+        padding: $space-3;
   
         .HobbiesAccordianItem {   
           height: fit-content;
@@ -121,7 +121,7 @@
           .accordianItemContent {
             height: 10vh;
             p {
-              font-size: .8rem;}
+              font-size: $font-sm;}
           }
         }
       }  

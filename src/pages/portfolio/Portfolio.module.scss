@@ -7,8 +7,8 @@
 
   .portfolioBackgroundFilter {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: $width-full;
+    height: $height-full;
     opacity: .7;
     background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 5%, rgba(9,9,121,1) 65%, rgba(0,212,255,1) 100%);
@@ -18,77 +18,77 @@
     position: absolute;
     top: 4vh;
     left: $screen-margin;
-    transform: rotate(-5deg) skew(-5deg);
     width: 13vw;
-    border-radius: 15px;
+    border-radius: $radius-large;
+    @include rotate-skew;
 
     .techStack {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 10px;   
-      color: white;
-      transform: rotate(-5deg) skew(-5deg);
-      width: 100%;
-      border-radius: 15px;
+      background-color:  $black-opacity-medium;
+      padding: $space-5;   
+      color: $white;
+      @include rotate-skew;
+      width: $width-full;
+      border-radius: $radius-large;
 
       & h3, h5, p {
         transform: skew(5deg)
       }
       & h3 {
-        font-size: 2rem;
+        font-size: $font-2xl;
       }
     }
 
     .resumeLink {
       background-image: linear-gradient(240deg, #44eed4, #19a2ec);
-      margin-top: 1rem;
-      padding: 10px;    
-      transform: rotate(-5deg) skew(-5deg);
-      width: 100%;
-      border-radius: 15px;
+      margin-top: $space-6;
+      padding: $space-5;  
+      @include rotate-skew;
+      width: $width-full;
+      border-radius: $radius-large;
 
       & h5, a {
         transform: skew(5deg);
         text-align: center;
-        width: 100%;
+        width: $width-full;
       }
 
       & a {
         display: flex;
         text-decoration: none;
-        color: black;
+        color: $black;
       }
     }
   }
 
   .portfolioMosaic {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: $black-opacity-dark;
     width: 70vw;
     height: 75vh;
     top: 45%;
     left: 60%;
     transform: translate(-50%, -50%);
-    padding: 1rem;
-    border-radius: 15px;
+    padding: $space-6;
+    border-radius: $radius-large;
     
     & > ul  {
-      height: 100%;
+      height: $height-full;
       overflow: hidden;
     }
   
     & > ul > li {
       position: relative;
-      color: white;
+      color: $white;
       max-height: 28vh;
   
       p {
-        font-size: 1rem;
+        font-size: $font-md;
       }
       
       img {
-        border-radius: 15px;
+        border-radius: $radius-large;
         width: 98%;
-        padding: 5px;
+        padding: $space-3;
       }
   
       &:hover > .mosaicText {
@@ -102,12 +102,12 @@
         display: none;
         position: absolute;
         top: 0;
-        width: 100%;
+        width: $width-full;
         height: 90%;
-        background-color: rgba(0, 0, 0, 0.7);    
-        color: white;
-        padding: 1rem;
-        border-radius: 5px;
+        background-color: $black-opacity-medium;
+        color: $white;
+        padding: $space-6;
+        border-radius: $radius-small;
 
         .portfolioLinks {
           display: flex;
@@ -127,7 +127,7 @@
       max-height: 28vh;
   
       p {
-        font-size: 1rem;
+        font-size: $font-md;
       }
       
     }
@@ -145,18 +145,18 @@
       .techStack {
         .techStackSection {
           & h5 {
-            font-size: 1.2rem;
+            font-size: $font-lg;
           }
 
           & p {
-            font-size: .8rem;
+            font-size: $font-sm;
           }
         }
       }
     
       .resumeLink {
         & h5 {
-          font-size: 1.2rem;
+          font-size: $font-lg;
         }
 
       }
@@ -176,22 +176,17 @@
         max-height: 20vh !important;
     
         p {
-          font-size: 1rem;
+          font-size: $font-md;
         }        
       } 
         h2 {
-          font-size: 2.5rem;
+          font-size: $font-3xl;
         }
 
         p {
           font-size: .7rem;
         }
     }   
-  }
-
-  @media screen and (max-height: 430px) {
-    .portfolioContainer {
-    }      
   }
 }
 
@@ -208,11 +203,11 @@
         .techStack {
           .techStackSection {
             display: flex;
-            padding: 2px 10px;
+            padding:  $space-1 $space-5;
             text-align: left;
 
             & h5 {
-              margin-right: 2rem;
+              margin-right: $space-7;
             }
           }
         }
@@ -224,7 +219,7 @@
           width: 25vw;
 
           & h5 {
-            font-size: 1.2rem;
+            font-size: $font-lg;
           }
         }  
       } 
@@ -253,11 +248,11 @@
           transform: none;
           .techStackSection {
             display: flex;
-            padding: 2px 10px;
+            padding:  $space-1 $space-5;
             text-align: left;
             
             & h5 {
-              margin-right: 2rem;
+              margin-right: $space-7;
             }
 
             & h5, p {
@@ -272,11 +267,11 @@
           right: $screen-margin;
           width: 25vw;
           transform: none;
-          padding: 5px;
+          padding: $space-3;
 
           & h5 {
             transform: none;
-            font-size: 1.2rem;
+            font-size: $font-lg;
           }
         }  
       } 
@@ -296,19 +291,19 @@
     .portfolioContainer {
       overflow-y: scroll;
       .portfolioSidebar {
-        top: 0rem;
-        right: 0px;
-        left: 0px;
+        top: $space-0;
+        right: $space-0;
+        left: $space-0;
         min-width: unset;
-        width: 100vw;
-        transform: rotate(5deg) skew(5deg);
+        width: $width-full;
+        @include unrotate-unskew;
     
       .techStack {
         display: none;
       }
     
       .resumeLink {
-        top: 10px;
+        top: $space-5;
         right: unset;
         left: 50%;
         width: 80vw;

@@ -1,6 +1,47 @@
 // Spacing
+$space-0: 0px;
+$space-1: 2px; // .1rem
+$space-2: 3px;
+$space-3: 5px;
+$space-4: 8px; // .5rem
+$space-5: 10px;
+$space-6: 16px; // 1rem
+$space-7: 32px; // 2rem
+$space-8: 80px; // 5rem
+
 $screen-margin: 5vw;
+
+// Size
+$width-full: 100%;
+$height-full: 100%;
+
 // Colors
+$white: rgb(255, 255, 255);
+$grey: rgb(128, 128, 128);
+$black: rgb(0, 0, 0);
+
+$black-opacity-light: rgb(0, 0, 0, .01);
+$black-opacity-medium: rgb(0, 0, 0, .6);
+$black-opacity-dark: rgb(0, 0, 0, .8);
+
+// Font
+$font-xs: 8px; // .5rem
+$font-sm: 13px; // .8rem
+$font-md: 16px; // 1rem
+$font-lg: 19px; // 1.2rem
+$font-xl: 24px; // 1.5rem
+$font-2xl: 32px; // 2rem
+$font-3xl: 40px; // 2.5rem
+
+$screen-margin: 5vw;
+
+
+// Border
+$radius-small: 5px;
+$radius-large: 15px;
+
+// Transformations
+
 
 // Animation
 $transition-fast: .5s;

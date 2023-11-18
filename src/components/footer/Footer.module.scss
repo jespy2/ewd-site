@@ -3,7 +3,7 @@
 .espylogo {
   width: 20rem;
   position: absolute;
-  bottom: 2rem;
+  bottom: $space-7;
   left: $screen-margin;
   svg {
     width: 15rem;
@@ -13,10 +13,10 @@
 
   .nameContainer {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: $font-xl;
     font-weight: bold;
-    color: white;
-    margin-top: 1rem;
+    color: $white;
+    margin-top: $space-6;
   }
 }
 .navContainer {
@@ -26,13 +26,13 @@
   justify-content: space-between;
   align-items: flex-end;
   position: absolute;
-  bottom: 2rem;
+  bottom: $space-7;
   right: $screen-margin;
   text-align: right;
-  font-size: 1.5rem;
+  font-size: $font-xl;
   font-weight: bold;
-  color: white;
-  margin-top: 1rem;
+  color: $white;
+  margin-top: $space-6;
 }
 
 
@@ -47,12 +47,12 @@
     }
 
     .nameContainer {
-      margin-top: .5rem;
+      margin-top: $space-4;
       h2 {
         font-size: 1.75rem;
       }
       h5 {
-        font-size: .8rem;
+        font-size: $font-sm;
       }
     }
   }
@@ -61,16 +61,16 @@
 @media screen and (max-width: 900px) {
   .espylogo {
   width: 10rem;
-  bottom: 1rem;
+  bottom: $space-6;
   svg {
     width: 5rem;
     height: 5rem;
   }
 
   .nameContainer {
-    margin-top: .5rem;
+    margin-top: $space-4;
     h2 {
-      font-size: 1.5rem;
+      font-size: $font-xl;
     }
     h5 {
       font-size: .75rem;
@@ -78,13 +78,13 @@
   }
   }
   .navContainer {
-    bottom: 1rem;
-    right: 1rem;
+    bottom: $space-6;
+    right: $space-6;
     h6 {
-      font-size: 1rem;
+      font-size: $font-md;
     }
     a {
-      font-size: 1rem;
+      font-size: $font-md;
     }
   }
 }
@@ -101,25 +101,25 @@
     }
 
   .nameContainer {
-    margin-top: .1rem;
+    margin-top: $space-1;
     h2 {
-      font-size: 1rem;
+      font-size: $font-md;
     }
     h5 {
-      font-size: .5rem;
+      font-size: $font-xs;
     }
   }
 }
 .navContainer {
   width: 60vw;
-  bottom: .5rem;
-  right: .5rem;
+  bottom: $space-4;
+  right: $space-4;
   text-align: right;
   h6 {
-    font-size: .8rem;
+    font-size: $font-sm;
   }
   a {
-    font-size: .8rem;
+    font-size: $font-sm;
   }
 }
 }
@@ -131,31 +131,31 @@
         align-items: center;
         justify-content: center;
         width: 8rem;
-        bottom: .5rem;
+        bottom:  $space-4;
         svg {
           width: 2rem;
           height: 2rem;
         }
     
       .nameContainer {
-        margin-top: .1rem;
+        margin-top: $space-1;
         h2 {
-          font-size: 1rem;
+          font-size: $font-md;
         }
         h5 {
-          font-size: .5rem;
+          font-size: $font-xs;
         }
       }
     }
     .navContainer {
-      bottom: .5rem;
+      bottom: $space-4;
       right: $screen-margin;
       text-align: right;
       h6 {
-        font-size: .8rem;
+        font-size: $font-sm;
       }
       a {
-        font-size: .8rem;
+        font-size: $font-sm;
       }
     }
   }

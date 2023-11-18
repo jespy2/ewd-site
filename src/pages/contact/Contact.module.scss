@@ -7,12 +7,12 @@
   .linksContainer {
     position: absolute;
     top: 50%;
-    right: 2rem;
+    right: $space-7;
     transform: translateY(-50%);
     width: 5rem;
     @include flex-column-center;
     a {
-      padding: 1rem;
+      padding: $space-6;
     }
     img {
       width: 3rem;
@@ -27,20 +27,20 @@
     .contactContainer {  
       .linksContainer {
         top: 40%;
-        right: 1rem;
+        right: $space-6;
         width: 5rem;
   
         img {
           width: 3rem;
           height: 3rem;
-          padding: 0;
-          margin: 0;
+          padding: $space-0;
+          margin: $space-0;
         }
     
         a {
           width: 3rem;
           height: 3rem;
-          margin: 0;
+          margin: $space-0;
         }
       }
     }
@@ -56,21 +56,21 @@
         top: unset;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 5rem;
+        bottom: $space-8;
         width: 10rem;
         justify-content: center;
     
         img {
           width: 3rem;
           height: 3rem;
-          padding: 0;
-          margin: 0;
+          padding: $space-0;
+          margin: $space-0;
         }
     
         a {
           width: 3rem;
           height: 3rem;
-          margin: 0;
+          margin: $space-0;
         }
       }
     }

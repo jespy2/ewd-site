@@ -5,8 +5,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: $width-full;
+  min-height: $height-full;
   position: fixed;
 }
 
@@ -29,14 +29,21 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: $white;
   }
 
   ::-webkit-scrollbar-track {
-    background-color: rgb(0,0,0,.1);
+    background-color: $black-opacity-light;
   }
 }
 
+// Transformations
+@mixin rotate-skew {
+  transform: rotate(-5deg) skew(-5deg);  
+}
+@mixin unrotate-unskew {
+  transform: rotate(-5deg) skew(-5deg);  
+}
 // Animation
 @mixin fade-in ($time) {
   animation: fadeIn $time;
