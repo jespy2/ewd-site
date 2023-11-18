@@ -18,10 +18,19 @@ export const Home = () => {
 			"linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, .2))",
 	};
 
+	const theme = 'homeContainer-blockTheme'
+
 	return (
-    <div className={styles.homeContainer}>
+    <div className={styles[theme]}>
 			{(!screenIsSmall || showMore) && (
 				<Box className={styles.homeInfoModal}>
+					<Box className={styles.homeGreeting}>
+					<Typography variant='h1' display='block'>
+             Hi.
+              <br />
+              I'm James
+            </Typography>
+					</Box>
 					<Box className={styles.homeInfoContainer}>
 						<Typography variant='h4' display='block'>
               FULL-STACK ENGINEER,

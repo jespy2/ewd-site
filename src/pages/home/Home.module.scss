@@ -1,6 +1,94 @@
 @import '../../styles/main.scss';
 
 .homeContainer {
+  &-blockTheme {
+    text-align: center;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: $width-full;
+  min-height: $height-full;
+  position: fixed;
+  .homeInfoModal {
+    // @include flex-column-center;
+    // position: absolute;
+    // height: fit-content;
+    // width: 70vw;
+    // top: 45%;
+    right: $screen-margin;
+    // transform: translateY(-50%);
+    text-align: left;
+    // border-radius: $radius-large;
+    // margin: 0 auto;
+    font-size: $font-xl;
+    // background-color: $black-opacity-dark;
+    color: $black;
+    padding: $space-6;
+    @include fade-in($transition-slow);
+
+    .homeGreeting {
+      position: absolute;
+      width: 32vw;      
+      top: $space-7;      
+      right: $space-7;
+      > h1 {
+        font-weight: 900;
+      } 
+    }
+
+    .homeInfoDivider {
+      display: none;
+    }
+    .homeInfoContainer {
+      > h4 {
+        position: absolute;
+        width: 70vw;      
+        bottom: 40vh;  
+        left: 45%;
+        transform: translateX(-50%);
+        > br {
+          display: none;
+        }
+      }
+      > h5 {
+        position: absolute;
+        width: 23vw;      
+        top: $space-7;      
+        right: $space-7; 
+        font-size: $font-lg;
+      }
+    }
+    .homeInfoBodyContainer {
+      position: absolute;
+      bottom: $space-7;
+      left: 55%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: row;
+      max-height: 50vh;
+      width: 90%;
+
+      .homeInfoBodyText {
+        width: 100%;
+        margin-right: $space-7;
+        > p {
+          margin-bottom: $space-4;
+        }
+        > br {
+          display: none;
+        }
+      }
+
+      .profilePic {
+        display: none;
+      }
+    }
+  }
+}
+}
+
+.homeContainer {
   @include hero-background('../../images/backgrounds/path.jpg');
   @include fade-in($transition-fast);
   @include scrollbar;
