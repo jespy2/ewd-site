@@ -1,38 +1,17 @@
+@import '../../styles/main.scss';
+
 .homeContainer {
-  text-align: center;
-  background-image: url(../../images/backgrounds/path.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-width: 100%;
-  min-height: 100%;
-  position: fixed;
-  animation: fadeIn .5s;
-  -webkit-animation: fadeIn .5s;
-  -moz-animation: fadeIn .5s;
-  -o-animation: fadeIn .5s;
-  -ms-animation: fadeIn .5s;
-
-  ::-webkit-scrollbar {
-    width: 2px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: white;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: rgb(0,0,0,.1);
-  }
+  @include hero-background('../../images/backgrounds/path.jpg');
+  @include fade-in($transition-fast);
+  @include scrollbar;
 
   .homeInfoModal {
-    display: flex;
-    flex-direction: column;
+    @include flex-column-center;
     position: absolute;
     height: fit-content;
     width: 70vw;
     top: 45%;
-    right: 5vw;
+    right: $screen-margin;
     transform: translateY(-50%);
     text-align: left;
     border-radius: 15px;
@@ -41,11 +20,7 @@
     background-color: rgb(0,0,0,.6);
     color: white;
     padding: 1rem;
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
+    @include fade-in($transition-slow);
 
     .homeInfoDivider {
       border-bottom: 1px solid white;
@@ -94,11 +69,7 @@
     background-color: rgb(0,0,0,.6);
     color: white;
     font-size: 1.5rem;
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
+    @include fade-in($transition-slow);
   }
 
   .homeReadMoreButtonContainer {
@@ -118,31 +89,6 @@
     padding: 3px;
     border-radius: 5px;
     }
-
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
 }
 
 // LANDSCAPE

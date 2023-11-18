@@ -1,8 +1,10 @@
+@import '../../styles/main.scss';
+
 .espylogo {
   width: 20rem;
   position: absolute;
   bottom: 2rem;
-  left: 5vw;
+  left: $screen-margin;
   svg {
     width: 15rem;
     height: 15rem;
@@ -25,7 +27,7 @@
   align-items: flex-end;
   position: absolute;
   bottom: 2rem;
-  right: 5vw;
+  right: $screen-margin;
   text-align: right;
   font-size: 1.5rem;
   font-weight: bold;
@@ -38,7 +40,7 @@
 @media screen and (max-width: 1900px) {
   .espylogo {
     width: 12rem;
-    left: 5vw;
+    left: $screen-margin;
     svg {
       width: 8rem;
       height: 8rem;
@@ -60,7 +62,6 @@
   .espylogo {
   width: 10rem;
   bottom: 1rem;
-  left: 5vw;
   svg {
     width: 5rem;
     height: 5rem;
@@ -148,7 +149,7 @@
     }
     .navContainer {
       bottom: .5rem;
-      right: 5vw;
+      right: $screen-margin;
       text-align: right;
       h6 {
         font-size: .8rem;

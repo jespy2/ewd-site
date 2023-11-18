@@ -1,0 +1,71 @@
+//Layout
+@mixin hero-background($pic) {
+  text-align: center;
+  background-image: url($pic);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-x-y {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50% );
+}
+
+@mixin scrollbar {
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: white;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(0,0,0,.1);
+  }
+}
+
+// Animation
+@mixin fade-in ($time) {
+  animation: fadeIn $time;
+  -webkit-animation: fadeIn $time;
+  -moz-animation: fadeIn $time;
+  -o-animation: fadeIn $time;
+  -ms-animation: fadeIn $time;
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}

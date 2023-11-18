@@ -1,17 +1,8 @@
+@import '../../styles/main.scss';
+
 .contactContainer {
-  text-align: center;
-  background-image: url(../../images/backgrounds/river.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-width: 100%;
-  min-height: 100%;
-  position: fixed;
-  animation: fadeIn .5s;
-  -webkit-animation: fadeIn .5s;
-  -moz-animation: fadeIn .5s;
-  -o-animation: fadeIn .5s;
-  -ms-animation: fadeIn .5s;
+  @include hero-background('../../images/backgrounds/river.jpg');
+  @include fade-in($transition-fast);
 
   .linksContainer {
     position: absolute;
@@ -19,9 +10,7 @@
     right: 2rem;
     transform: translateY(-50%);
     width: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex-column-center;
     a {
       padding: 1rem;
     }

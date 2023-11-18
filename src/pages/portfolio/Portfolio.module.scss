@@ -1,19 +1,11 @@
-.homeContainer {
-  text-align: center;
-  background-image: url(../../images/backgrounds/code.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-width: 100%;
-  min-height: 100%;
-  position: fixed;
-  animation: fadeIn .5s;
-  -webkit-animation: fadeIn .5s;
-  -moz-animation: fadeIn .5s;
-  -o-animation: fadeIn .5s;
-  -ms-animation: fadeIn .5s;
+@import '../../styles/main.scss';
 
-  .homeBackgroundFilter {
+.portfolioContainer {
+  @include hero-background('../../images/backgrounds/code.jpg');
+  @include fade-in($transition-fast);
+  @include scrollbar;
+
+  .portfolioBackgroundFilter {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -25,7 +17,7 @@
   .portfolioSidebar {
     position: absolute;
     top: 4vh;
-    left: 5vw;
+    left: $screen-margin;
     transform: rotate(-5deg) skew(-5deg);
     width: 13vw;
     border-radius: 15px;
@@ -81,7 +73,7 @@
     
     & > ul  {
       height: 100%;
-      overflow: auto;
+      overflow: hidden;
     }
   
     & > ul > li {
@@ -101,11 +93,7 @@
   
       &:hover > .mosaicText {
         display: block;
-        animation: fadeIn 1s;
-        -webkit-animation: fadeIn 1s;
-        -moz-animation: fadeIn 1s;
-        -o-animation: fadeIn 1s;
-        -ms-animation: fadeIn 1s;
+        @include fade-in($transition-slow);
       }      
 
       .mosaicText {
@@ -129,42 +117,7 @@
     }
   }
 
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: white;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: rgb(0,0,0,.1);
-  }
-  
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+  @include scrollbar;
 }
 
 // LANDSCAPE
@@ -187,7 +140,7 @@
   }
 
   @media screen and (max-height: 895px) {
-    .homeContainer {
+    .portfolioContainer {
       .portfolioSidebar {    
       .techStack {
         .techStackSection {
@@ -212,7 +165,7 @@
   }
 
   @media screen and (max-height: 430px) {  
-    .homeContainer {
+    .portfolioContainer {
       .portfolioSidebar {
         .techStack {
           display: none;
@@ -237,7 +190,7 @@
   }
 
   @media screen and (max-height: 430px) {
-    .homeContainer {
+    .portfolioContainer {
     }      
   }
 }
@@ -245,7 +198,7 @@
 // PORTRAIT
 @media screen and (orientation: portrait) {
   @media screen and (max-width:1100px) {
-    .homeContainer {
+    .portfolioContainer {
       .portfolioSidebar {
         top: 13%;
         left: 50%;
@@ -267,7 +220,7 @@
         .resumeLink {
           position: absolute;
           top: 8vh;
-          right: 5vw;
+          right: $screen-margin;
           width: 25vw;
 
           & h5 {
@@ -288,7 +241,7 @@
   }
 
   @media screen and (max-width: 800px) {
-    .homeContainer {
+    .portfolioContainer {
       .portfolioSidebar {
         top: 13%;
         left: 50vw;
@@ -316,7 +269,7 @@
         .resumeLink {
           position: absolute;
           top: 12vh;
-          right: 5vw;
+          right: $screen-margin;
           width: 25vw;
           transform: none;
           padding: 5px;
@@ -340,8 +293,8 @@
   }
 
   @media screen and (max-width: 600px) {    
-    .homeContainer {
-      overflow: scroll;
+    .portfolioContainer {
+      overflow-y: scroll;
       .portfolioSidebar {
         top: 0rem;
         right: 0px;

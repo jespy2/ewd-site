@@ -18,8 +18,8 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 export const Portfolio = () => {
 
   return (
-    <Box className={styles.homeContainer} >
-      <Box className={styles.homeBackgroundFilter} ></Box>
+    <Box className={styles.portfolioContainer} >
+      <Box className={styles.portfolioBackgroundFilter} ></Box>
       <Box className={styles.portfolioSidebar} >
       <Box className={styles.techStack}>
         <Typography variant="h3" >Tech Stack</Typography>
