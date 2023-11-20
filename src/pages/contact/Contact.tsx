@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Link } from '@mui/material';
 
-import { ContactForm } from '../../components/contact-form/ContactForm';
+import { ContactForm } from './components/contact-form/ContactForm';
 
 import LinkedInLogo from '../../images/logos/linkedin.png';
 import GithubLogo from '../../images/logos/github.png';
