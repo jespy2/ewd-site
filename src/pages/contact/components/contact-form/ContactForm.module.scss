@@ -15,6 +15,14 @@
   @include fade-in($transition-slow);
   .contactForm {
     @include flex-column-center;
+
+    // Remove chrome autofill color from inputs
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: all 5000000s ease-in-out 0s;
+    }
     & > div {
       width: 90%;
     }
