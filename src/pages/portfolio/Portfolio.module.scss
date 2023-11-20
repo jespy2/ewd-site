@@ -97,6 +97,7 @@
       }      
 
       .mosaicText {
+        position: relative;
         overflow-y: scroll;
         text-align: left;
         display: none;
@@ -108,6 +109,11 @@
         color: $white;
         padding: $space-6;
         border-radius: $radius-small;
+
+        .openPortfolioModal {
+          position: absolute;
+          right: $space-6;
+        }
 
         .portfolioLinks {
           display: flex;
