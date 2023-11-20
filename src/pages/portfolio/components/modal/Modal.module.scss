@@ -1,20 +1,16 @@
-@import '../../../styles/main.scss';
+@import '../../../../styles/main.scss';
 
-.greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
-  position: absolute;
-  height: fit-content;
-  width: 55vw;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -50%);
+.portfolioModal {
+  position: fixed;
+  height: $height-full;
+  width: $width-full;
   text-align: left;
-  border-radius: $radius-large;
-  margin: 0 auto;
   font-size: $font-xl;
-  background-color: $black-opacity-dark;
+  background-color: $black-opacity-darkest;
   color: $white;
   padding: $space-6;
   @include fade-in($transition-slow);
+  z-index: 20;
 
   img {
     width: $width-full;
@@ -25,93 +21,21 @@
   }
 
   .modalContent {
-    overflow-x: scroll;
-  }
-}
-
-.greetingModal{  
-  background-color: $black-opacity-light;
-
-  .modalContent {
-    overflow: unset;
-  }
-}
-
-.resumeModal {
-  max-width: fit-content;
-  overflow: unset;
-  .modalContent {
-    height: 65vh;
-    margin: auto;
-  }
-  }
-
-  .cityPickerModal, .goMenuModal, .storialModal {
-    .modalContent {
-      height: 60vh;
-    }
-    }
-
-.cityPickerModal, .goMenuModal, .storialModal {
-  div > a > img {
-    width: 1rem;
-    height: 1rem;
+    position: relative;
+    height: fit-content;
+    width: 70vw;
+    @include center-x-y;
   }
 }
 
 // LANDSCAPE
 @media screen and (orientation: landscape) {
-  @media screen and (max-height: 895px) {
-    .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
-      top: 45%;
-      left: 50%;
-      height: 70vh;
-      width: 60vw;
-    }
-      .resumeModal {
-        img {
-          width: 50rem;
-        }
-      }    
-    .greetingModal {
-      left: 50%;
-      height: 25vh;
-    }      
-  }
-
-  @media screen and (max-width: 1500px){
-    .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
-      left: 50%;
-    }
-    
-    .greetingModal {
-      height: 15vh;
-    }
-  }
-
-  @media screen and (max-width: 1300px){
-    .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
-      left: 55%;
-    }
-  }
-
-  @media screen and (max-width: 900px){
-    .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
-      left: 50%;
-    }
-  }
-
-  @media screen and (max-height: 700px) and (max-width: 1020px) {
-    .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
-      left: 50%;
-    }
-  }
-
-  @media screen and (max-height: 430px) {
-    .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
-      padding: $space-3;
+  @media screen and (max-height: 895px) {  
+    .portfolioModal {
       .modalContent {
-        height: 57vh;
+        height: 90vh;
+        width: 80vw;
+        overflow-y: scroll;
       }
     }
   }
@@ -119,41 +43,13 @@
 
 // PORTRAIT
 @media screen and (orientation: portrait) {
-  @media screen and (max-width: 830px) {
-    .modalContent {
-      height: 95%;
-      margin-bottom: $space-3;
-    }
-    .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
-      top: $space-7;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 50rem;
-      width: 30rem;
-    }
-      .resumeModal {
-        img {
-          width: 50rem;
-        }
-      }
-    
-    .greetingModal {
-      top: $space-8;
-      height: $space-8;
-      width: 25rem;
-    }    
-  }
-
   @media screen and (max-width: 600px) {
-    .greetingModal, .resumeModal, .cityPickerModal, .goMenuModal, .storialModal {
-      top: 12rem;
-      height: 65%;
-      width: 90%;
+    .portfolioModal {
+      .modalContent {
+        height: 90vh;
+        width: 80vw;
+        overflow-y: scroll;
+      }
     }
-    
-    .greetingModal {
-      height: 13rem;
-      width: 90%;
-    } 
   }
 }

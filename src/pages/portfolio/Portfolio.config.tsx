@@ -79,7 +79,7 @@ export const itemData = [
         
         <Typography variant='body1' >This was for an assessment I did in 2021 for a role I ended up taking.  The prompt was the following:</Typography>
         <Typography variant='body2' sx={{ fontStyle: 'italic' }} >Using the UI framework of your choice, build a UI around a hypothetical RESTful library API. Assume this API returns a list of books in a library, and allows for CRUD operations on a single book. The application should support those endpoints.</Typography><br />
-        <Typography variant='body1' >Because this was a frontend-only role, I was only tasked with building the UI, but decided to build a fullstack app so that the reviewing team could punch through the final product.  I started with a using Adobe products to build the branding package, including name, logo, color palate and wireframing.  The frontend was in React, and I took the opportunity to try out Tailwind.css (which I enjoyed and ended up using quite a bit in my new role).  The backend was built with Node/Express and MongoDB. </Typography><br />
+        <Typography variant='body1' >Because this was a frontend-only role, I was only tasked with building the UI, but decided to build a fullstack app so that the reviewing team could punch through the final product.  I started with using Adobe products to build the branding package, including name, logo, color palate and wireframing.  The frontend was in React, and I took the opportunity to try out Tailwind.css (which I enjoyed and ended up using quite a bit in my new role).  The backend was built with Node/Express and MongoDB. </Typography><br />
         <Typography variant='body1' >Since this was a takehome assessment, I had only a few days to go from design to prod.</Typography><br />
         <Box >
           <Link className={styles.portfolioLinks} href='https://github.com/jespy2/storial' variant='body2' target='_blank' underline='none' color='yellow'>
@@ -99,7 +99,7 @@ export const itemData = [
     children: 
       <>
         <Typography variant='h4' >City Picker</Typography>
-        <Typography variant='body1' >This was one of my first app projects in React (as opposed to "static" websites, which I'd been building for a few years).  The concept was to guide user through various data to determine what city would be the best fit for them.  The code is a bit rough, as I was tackling a bunch of new tech and concepts.  This is a relatively simple project in retrospect, but it was an important step for me in bringing together much of what I'd learned on my path to becoming an enterprise-level engineer (transitioning from freelance website design).</Typography><br />
+        <Typography variant='body1' >This was one of my first app projects in React (as opposed to "static" websites, which I'd been building for a few years).  The concept was to guide users through various data to determine what city would be the best fit for them.  The code is a bit rough, as I was tackling a bunch of new tech and concepts.  This is a relatively simple project in retrospect, but it was an important step for me in bringing together much of what I'd learned on my path to becoming an enterprise-level engineer (transitioning from freelance website design).</Typography><br />
 
         <Typography variant='body1' >My intention with this project was to highlight my front-end skills. There was some interesting challenges with the data (collection, processing and algorithm development), but didn't want to make that too central to this addition to my portfolio.</Typography><br />
 
@@ -155,7 +155,7 @@ export const itemData = [
     children: 
       <>
         <Typography variant='h4' >redis-hawk</Typography>
-        <Typography variant='body1' >I was part of the open-source team that developed redis-hawk, an app allows users to monitor the keyspace and its events within all databases of any number of deployed Redis instances.
+        <Typography variant='body1' >I was part of the open-source team that developed redis-hawk, an app that allows users to monitor the keyspace and its events within all databases of any number of deployed Redis instances.
         </Typography><br />
         <Typography variant='body1' >This was a great opportunity to work with some awesome engineers that allowed me to focus on the backend.  My contribution was adding some fun algorithms and data structures, as well as basic routing to the server-side middleware.</Typography><br />
         <Box >

@@ -1,5 +1,9 @@
+import { Dispatch, SetStateAction, ReactNode, PropsWithChildren } from 'react';
+
 import { Box, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
+
+import { Modal } from './modal/Modal';
 
 import { itemData } from '../Portfolio.config';
 
@@ -15,7 +19,7 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
   };
 }
 
-export const Mosaic = () => {
+export const Mosaic = ({setModalIsOpen}: {setModalIsOpen: Dispatch<SetStateAction<{ children?: ReactNode; } | undefined>>}) => {
 
   return (
       <Box className={styles.portfolioMosaic} >
@@ -35,7 +39,7 @@ export const Mosaic = () => {
                 <Box
                   className={styles.openPortfolioModal}
                   onClick={() => {
-                    console.log('clicked')
+                    setModalIsOpen(item.children as PropsWithChildren)
                   }}
                 >
                   <OpenInFullIcon />

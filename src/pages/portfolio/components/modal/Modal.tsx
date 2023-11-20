@@ -1,35 +1,28 @@
-import React, { Dispatch, SetStateAction } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 import { Box } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { IModalProps } from "./Modal.config";
+import styles from './Modal.module.scss'
 
-import styles from "./Modal.module.scss";
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-
-interface IProps {
-	modalProps: IModalProps;
-	setOpenGreeting: Dispatch<SetStateAction<boolean>>;
-	setModalState?: Dispatch<SetStateAction<boolean>>;
+interface IModalProps {
+	children: PropsWithChildren;
+	closeModal: () => void;
 }
 
-export const Modal = (props: IProps) => {
-	const { modalProps, setOpenGreeting, setModalState } = props;
+export const Modal = (props: IModalProps ) => {
+	const { children, closeModal } = props;
 
 	return (
-		<Box className={styles[String(modalProps.class)]}>
-			{modalProps.modal !== "greeting" && (
+		<Box className={styles.portfolioModal}>
+			<Box className={styles.modalContent}>
 				<Box
 					className={styles.closeContainer}
-					onClick={() => {
-						setModalState && setOpenGreeting(true);
-						setModalState && setModalState(false);
-					}}
+					onClick={() => closeModal()}
 				>
 					<CloseIcon />
 				</Box>
-			)}
-			<Box className={styles.modalContent}>{modalProps.children}</Box>
+				{children as ReactNode}
+			</Box>
 		</Box>
 	);
 };
