@@ -1,21 +1,18 @@
-import { PropsWithChildren, useState } from "react";
-import { Box, Divider, Typography } from "@mui/material";
-import OpenInFullIcon from "@mui/icons-material/OpenInFull";
+import { ReactNode, useState } from "react";
+import { Box, Typography } from "@mui/material";
 
 import { Modal } from "../../components/modal/Modal";
 import { HomeInfoText } from "./components/HomeInfoText";
 import { HomeInfoTitles } from "./components/HomeInfoTitles";
+import { HomeShowLess } from "./components/HomeShowLess";
+import { HomeShowMore } from "./components/HomeShowMore";
 import { Footer } from "../../components/footer/Footer";
 import { useScreenSize } from "../../config/customHooks";
 import styles from "./Home.module.scss";
 
 export const Home = () => {
 	const [showMore, setShowMore] = useState<boolean>(false);
-	const [modalIsOpen, setModalIsOpen] = useState<PropsWithChildren>();
-
-	const closeModal = () => {
-		setModalIsOpen(undefined);
-	};
+	const [modalIsOpen, setModalIsOpen] = useState<ReactNode>();
 
 	const screenSize = useScreenSize();
 	const screenIsSmall = screenSize.isSmall;
@@ -23,11 +20,19 @@ export const Home = () => {
 	const modalContent = (
 		<>
 			<HomeInfoTitles />
-			<br className={styles.titleLineBreak} />
 			<HomeInfoText />
-			<Box className={styles.profilePic}></Box>
 		</>
-	)
+	) as ReactNode;
+
+	const openModal = () => {
+		setModalIsOpen(modalContent);
+	};
+
+	const closeModal = () => {
+		setModalIsOpen(undefined);
+	};
+
+	const handleShowMore = () => {setShowMore(!showMore)};
 
 	const buttonBackgroundStyles = {
 		backgroundImage:
@@ -38,7 +43,7 @@ export const Home = () => {
 		<div className={styles.homeContainer}>
 			{modalIsOpen && (
 				<Modal
-					children={modalIsOpen as PropsWithChildren}
+					children={modalIsOpen}
 					closeModal={closeModal}
 				/>
 			)}
@@ -48,13 +53,7 @@ export const Home = () => {
 						<HomeInfoTitles />
 						<br className={styles.titleLineBreak} />
 						<Box className={styles.homeInfoBodyContainer}>
-						<Box
-								className={styles.openPortfolioModal}
-								onClick={() => {setModalIsOpen({modalContent} as PropsWithChildren)}}
-							>
-								<OpenInFullIcon />
-							</Box>
-							<HomeInfoText />
+							<HomeInfoText openModal={openModal} modalIsOpen={modalIsOpen} />
               <Box className={styles.profilePic}></Box>
             </Box>
 						{screenIsSmall && (
@@ -63,42 +62,14 @@ export const Home = () => {
 								<br />
 							</>
 						)}
-						{screenIsSmall && (
-							<Box
-								className={styles.homeReadMoreButtonContainer}
-								sx={buttonBackgroundStyles}
-							>
-								<Typography
-									variant='button'
-									className={styles.homeReadMoreButton}
-									onClick={() => setShowMore(!showMore)}
-								>
-									show less
-								</Typography>
-							</Box>
-						)}
+						{screenIsSmall && <HomeShowLess handleShowMore={handleShowMore} />}
 					</Box>
 				</Box>
 			)}
 
-			{screenIsSmall && !showMore && (
-				<Box className={styles.homeReadMoreContainer}>
-					<Box className={styles.homeReadMoreText}>
-						<HomeInfoTitles />
-						<br />
-						<br />
-						<Box className={styles.homeReadMoreButtonContainer}>
-							<Typography
-								variant='button'
-								className={styles.homeReadMoreButton}
-								onClick={() => setShowMore(!showMore)}
-							>
-								read more
-							</Typography>
-						</Box>
-					</Box>
-				</Box>
-			)}
+			{(screenIsSmall && !showMore) && 
+				<HomeShowMore handleShowMore={handleShowMore} />
+			}
 
         <Footer page='home' />
 		</div>

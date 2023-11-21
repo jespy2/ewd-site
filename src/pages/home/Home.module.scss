@@ -34,11 +34,16 @@
       max-height: 50vh;
 
       .homeInfoBodyText {
+        position: relative;
         width: 70%;
         margin-right: $space-7;
         overflow-y: scroll;
-      }
 
+        .openHomeModal {
+          position: absolute;
+          right: $space-6;
+        }
+      }
       .profilePic {
         position: sticky;
         top: 0;
@@ -66,7 +71,7 @@
     text-align: left;
     border-radius: $radius-large;
     margin: 0 auto;
-    background-color: $black-opacity-light;
+    background-color: $black-opacity-dark;
     color: $white;
     font-size: $font-xl;
     @include fade-in($transition-slow);
@@ -185,7 +190,8 @@
         font-size: $font-xl;
 
         .homeInfoContainer{
-          padding: $space-6;
+          padding-left: $space-3;
+          padding-right: $space-3;
 
           .homeInfoBodyContainer {
             max-height: 35vh;
@@ -204,7 +210,7 @@
           width: $width-full;
           height: 3rem;
           .homeReadMoreButton {
-            margin-right: $space-7;
+            margin-right: $space-8;
           }
         }
       }

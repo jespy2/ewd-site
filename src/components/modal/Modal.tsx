@@ -5,7 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import styles from './Modal.module.scss'
 
 interface IModalProps {
-	children: PropsWithChildren;
+	children: PropsWithChildren | ReactNode | ReactNode[];
 	closeModal: () => void;
 }
 
@@ -13,7 +13,7 @@ export const Modal = (props: IModalProps ) => {
 	const { children, closeModal } = props;
 
 	return (
-		<Box className={styles.portfolioModal}>
+		<Box className={styles.modal}>
 			<Box className={styles.modalContent}>
 				<Box
 					className={styles.closeContainer}

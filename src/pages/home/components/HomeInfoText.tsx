@@ -1,11 +1,31 @@
+import { ReactNode } from "react";
 import { Box, Typography } from "@mui/material";
+import OpenInFullIcon from "@mui/icons-material/OpenInFull";
+
 import styles from "../Home.module.scss";
 
-export const HomeInfoText = () => {
+interface IHomeInfoTextProps { 
+  openModal?: () => void;
+  modalIsOpen?: ReactNode;
+}
+
+export const HomeInfoText = (props: IHomeInfoTextProps) => {
+  const { openModal, modalIsOpen } = props;
 
 	return (
 		<>
       <Box className={styles.homeInfoBodyText}>
+        {(!modalIsOpen && openModal) && 
+          <>
+            <Box
+              className={styles.openHomeModal}
+              onClick={() => openModal()}
+            >
+              <OpenInFullIcon />
+            </Box>
+            <br />
+          </>
+        }
         <Typography variant='body1' display='block'>
           I build captivating front-end applications
           that not only look great but also function seamlessly because they
