@@ -1,12 +1,15 @@
 import { useState, Dispatch, SetStateAction } from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Card, CardContent, CardMedia, ClickAwayListener, Typography } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, Box, Card, CardContent, CardMedia, ClickAwayListener, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import OpenInFullIcon from "@mui/icons-material/OpenInFull";
 
-import { hobbiesAccordianProps } from './HobbiesAccordian.config';
+import { IAccordianProps, hobbiesAccordianProps } from './HobbiesAccordian.config';
 
 import styles from './HobbiesAccordian.module.scss';
 
-export const Accordian = ({setInfoHidden}: {setInfoHidden: Dispatch<SetStateAction<boolean>>}) => { 
+export const Accordian = (props: IAccordianProps) => {
+	const { setInfoHidden, openModal } = props;
+
 	const [expanded, setExpanded] = useState({
 		'Martial Arts': false,
 		Motorcycles: false,
@@ -14,9 +17,9 @@ export const Accordian = ({setInfoHidden}: {setInfoHidden: Dispatch<SetStateActi
 		Family: false,
 	});
 
-	const handleClickAway = (accordianName: string) => { 
+	const handleClickAway = (accordianName: string) => {
 		setExpanded({ ...expanded, [accordianName]: false });
-	}
+	};
 
   const accordianItems = hobbiesAccordianProps.map((item) => { 
 		return (
@@ -49,7 +52,16 @@ export const Accordian = ({setInfoHidden}: {setInfoHidden: Dispatch<SetStateActi
               image={item.image}
               title={item.imagetitle}
             />
-            <CardContent className={styles.accordianItemContent}>
+							<CardContent className={styles.accordianItemContent}>
+          <>
+            <Box
+              className={styles.openAboutModal}
+              onClick={() => openModal(item)}
+            >
+              <OpenInFullIcon />
+            </Box>
+            <br />
+          </>
 							<Typography variant='body1' display='block'>
 								{item.text}
 							</Typography>

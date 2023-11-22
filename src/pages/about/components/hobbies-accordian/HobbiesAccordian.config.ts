@@ -1,21 +1,27 @@
-import Sword from "../../../images/pics/sword.jpg"
-import Hike from "../../../images/pics/hike.jpg"
-import Ride from "../../../images/pics/ride.jpg"
-import Hammock from "../../../images/pics/hammock.jpg";
+import { Dispatch, SetStateAction } from "react";
+import Sword from "../../../../images/pics/sword.jpg"
+import Hike from "../../../../images/pics/hike.jpg"
+import Ride from "../../../../images/pics/ride.jpg"
+import Hammock from "../../../../images/pics/hammock.jpg";
 
-interface IHobbiesAccordianProps {
+export interface IAccordianItemProps {
   title: string;
   image: string;
   imagetitle: string;
   text: string;
- }
+}
+ 
+export interface IAccordianProps { 
+	setInfoHidden: Dispatch<SetStateAction<boolean>>;
+	openModal: (item: IAccordianItemProps) => void;
+}
 
-export const hobbiesAccordianProps: IHobbiesAccordianProps[] = [
+export const hobbiesAccordianProps: IAccordianItemProps[] = [
   {
     title: 'Martial Arts',
     image: Sword,
     imagetitle: 'sword cut',
-    text: "I taught martial arts for three decades and ran a school (Dojang) for 17 years.  Martial arts has taught me discipline, patience, and the importance of continuous self-improvement—values that resonate well with the ever-evolving tech landscape. Just as in martial arts, I believe in the power of practice, the importance of refining one's skills, and the need to stay agile in the face of challenges."
+    text: "I ran a martial arts school (Dojang) for 17 years.  Martial arts has taught me discipline, patience, and the importance of continuous self-improvement—values that resonate well with the ever-evolving tech landscape. Just as in martial arts, I believe in the power of practice, the importance of refining one's skills, and the need to stay agile in the face of challenges."
   },
   {
     title: 'Motorcycles',
