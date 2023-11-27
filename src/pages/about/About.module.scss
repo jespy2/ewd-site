@@ -2,13 +2,12 @@
 
 .hobbiesModalCard {
   background-color: $black-opacity-darkest;
-  width: 70vw;
+  width: 90vw;
   height: $height-full;
   overflow: hidden;
 
   .hobbiesModalCardHero{
     display: block;
-    height: 50vh;
     width: unset;
     margin: auto;
     background-size: cover;
@@ -23,7 +22,7 @@
     color: $white;
     position: relative;
     height: fit-content;
-    width: 70vw;
+    width: 90vw;
   }
 }
 

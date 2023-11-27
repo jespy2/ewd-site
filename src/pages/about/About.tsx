@@ -23,7 +23,15 @@ export const About = () => {
 			<>
 				<div className={styles.hobbiesModalCard}>
 					<Typography variant='h2' display='block'>{title}</Typography>
-					<div className={styles.hobbiesModalCardHero} style={{backgroundImage: `url(${image})`}} />
+					<div
+						className={styles.hobbiesModalCardHero}
+						style={{
+							backgroundImage: `url(${image})`,
+							height: title === 'Martial Arts' ? "60vh" : "50vh",
+							width: title === 'Martial Arts' ? "60vw" : "90vh",
+							backgroundPosition: title === 'Martial Arts' ? "unset" : "center"
+						}}
+					/>
 					<div className={styles.hobbiesModalContent}>
 						<Typography variant='body1' display='block'>{text}</Typography>
 					</div>

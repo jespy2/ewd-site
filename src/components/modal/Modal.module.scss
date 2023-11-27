@@ -34,11 +34,7 @@
     .modal {
       .modalContent {
         height: 90vh;
-        width: 80vw;
-        overflow-y: scroll;
-          &:has(.hobbiesModalCard) { 
-            overflow-y: hidden;
-          }
+        width: 90vw;
       }      
     }
   }
