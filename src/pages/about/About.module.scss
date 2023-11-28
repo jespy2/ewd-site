@@ -4,7 +4,7 @@
   background-color: $black-opacity-darkest;
   width: 90vw;
   height: $height-full;
-  overflow: hidden;
+  overflow: unset;
 
   .hobbiesModalCardHero{
     display: block;
@@ -21,8 +21,10 @@
     background-color: $black-opacity-darkest;
     color: $white;
     position: relative;
-    height: fit-content;
+    // height: fit-content;
     width: 90vw;
+    overflow: scroll;
+    height: 20vh;
   }
 }
 

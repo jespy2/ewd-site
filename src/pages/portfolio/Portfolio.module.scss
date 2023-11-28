@@ -2,8 +2,9 @@
 
 
 .portfolioItemContent {
-  overflow-y: scroll;
-  height: 85vh;
+  // overflow-y: scroll;
+  height: fit-content;
+  margin-bottom: 5vh;
 
 .portfolioModalCardHero {
   height: 50vh;
@@ -174,11 +175,17 @@
 
   @media screen and (max-height: 895px) {
     .portfolioContainer {
-      .portfolioSidebar {    
+      .portfolioSidebar {  
+        width: 15vw;
+
       .techStack {
+        & h3 {
+          font-size: $font-xl;
+        }
         .techStackSection {
           & h5 {
-            font-size: $font-lg;
+            font-size: $font-md;
+            font-weight: bolder;
           }
 
           & p {
@@ -225,6 +232,38 @@
 
 // PORTRAIT
 @media screen and (orientation: portrait) {
+  .portfolioItemContent {  
+    .portfolioModalCardHero {
+      height: 20vh;
+      width: 100%;
+    }
+  }
+
+  // .portfolioContainer {
+  //   .portfolioSidebar {      
+  //     // .resumeLink {
+  //     //   @include unrotate-unskew;
+  //     //   position: absolute;
+  //     //   top: $space-1;
+  //     //   top: 13%;
+  //     //   left: 50vw;
+  //     //   min-width: 95vw;
+
+  //     //   & a > h5 {
+  //     //     font-size: $font-3xl;
+  //     //   }
+  //     // }  
+  //   } 
+  //   .portfolioMosaic {   
+  //     top: 40%;
+  //     width: 95vw;
+  //     height: 47dvh;
+  //     & ul > li {
+  //       height: 90% !important;
+  //     }
+  //   }  
+  // }
+
   @media screen and (max-width:1100px) {
     .portfolioContainer {
       .portfolioSidebar {
@@ -271,11 +310,9 @@
   @media screen and (max-width: 800px) {
     .portfolioContainer {
       .portfolioSidebar {
-        top: 13%;
-        left: 50vw;
-        min-width: 95vw;
-        transform: none;
-        transform: translate(-50%, -50%);
+        width: $width-full;  
+        left: 50%;
+        transform: translate(-50%,-50% );
     
         .techStack {
           transform: none;
@@ -296,11 +333,12 @@
       
         .resumeLink {
           position: absolute;
-          top: 12vh;
+          top: 10vh;
           right: $screen-margin;
-          width: 25vw;
+          width: fit-content;
           transform: none;
-          padding: $space-3;
+          padding: $space-4;
+          border-radius: $radius-small;
 
           & h5 {
             transform: none;
@@ -317,6 +355,18 @@
           height: 90% !important;
         }
       }  
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .portfolioContainer {
+      .portfolioSidebar {
+        .resumeLink {
+          width: 17vw;
+          top: 11vh;
+          right: 2vw;
+        }  
+      } 
     }
   }
 
@@ -355,6 +405,7 @@
         & > ul {
         grid-template-columns: 90vw !important; 
         gap: 10vh !important;    
+        overflow: scroll;
         } 
         & > ul > li{
           grid-column-end: span 1 !important; 

@@ -103,9 +103,15 @@
       .homeInfoModal {
         height: 70vh;
         width: 75vw;
+        top: 50%;
+        right: unset;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
         .homeInfoContainer {
           height: 31vh;
+          position: absolute;
+          top: 5px;
 
           .homeInfoBodyContainer {
             .homeInfoBodyText {

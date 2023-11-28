@@ -42,7 +42,7 @@
   transform: rotate(-5deg) skew(-5deg);  
 }
 @mixin unrotate-unskew {
-  transform: rotate(-5deg) skew(-5deg);  
+  transform: rotate(5deg) skew(5deg);  
 }
 // Animation
 @mixin fade-in ($time) {

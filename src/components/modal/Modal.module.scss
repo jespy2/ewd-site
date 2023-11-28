@@ -18,6 +18,9 @@
   .closeContainer {
     text-align: right;
     cursor: pointer;
+    position: sticky;
+    top: 0;
+    right: 0;
   }
 
   .modalContent {
@@ -30,6 +33,14 @@
 
 // LANDSCAPE
 @media screen and (orientation: landscape) {
+  @media screen and (max-height: 1200px) {  
+    .modal {
+      .modalContent {
+        overflow-y: scroll;
+        padding-bottom: 50px;
+      }      
+    }
+  }
   @media screen and (max-height: 895px) {  
     .modal {
       .modalContent {

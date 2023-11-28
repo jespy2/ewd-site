@@ -4,7 +4,7 @@ import styles from "../Home.module.scss";
 export const HomeInfoTitles = () => {
 	return (
 		<>
-      <Box className={styles.homeInfoContainer}>
+      <Box className={styles.homeTitlesContainer}>
         <Typography variant='h4' display='block'>
           FULL-STACK ENGINEER,
           <br />
