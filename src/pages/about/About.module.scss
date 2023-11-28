@@ -21,7 +21,6 @@
     background-color: $black-opacity-darkest;
     color: $white;
     position: relative;
-    // height: fit-content;
     width: 90vw;
     overflow: scroll;
     height: 20vh;
@@ -186,6 +185,21 @@
 
 //  PORTRAIT
 @media screen and (orientation: portrait) {
+  .hobbiesModalCard {
+    width: $width-full;
+    height: $height-full;
+  
+    .hobbiesModalCardHero{
+      width: $width-full !important;
+      height: 20vh !important;
+    }
+    
+    .hobbiesModalContent {
+      margin-top: $space-6;
+      width: $width-full;
+      height: 70vh;
+    }
+  }
   @media screen and (max-width: 700px){
     .aboutContainer {
       .aboutSubContainer {
