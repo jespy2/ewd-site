@@ -23,7 +23,7 @@ export const Accordian = (props: IAccordianProps) => {
 
   const accordianItems = hobbiesAccordianProps.map((item) => { 
 		return (
-			<ClickAwayListener onClickAway={() => handleClickAway(item.title)}>
+			<ClickAwayListener onClickAway={() => handleClickAway(item.title)} key={item.title} >
 				<Accordion
 					className={styles.HobbiesAccordianItem}
 					expanded={expanded[item.title as keyof typeof expanded]}
