@@ -38,7 +38,7 @@
     height: 80vh;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: start;
+    justify-content: flex-start;
 
     .aboutInfoContainer {
       height: fit-content;
@@ -131,7 +131,7 @@
     .aboutContainer {
       .aboutSubContainer {
         flex-direction: row-reverse;
-        align-items: start;
+        align-items: flex-start;
         justify-content: space-between;
         top: 30%;
         right: unset;
