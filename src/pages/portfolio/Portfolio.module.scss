@@ -269,31 +269,6 @@
     }
   }
 
-  // .portfolioContainer {
-  //   .portfolioSidebar {      
-  //     // .resumeLink {
-  //     //   @include unrotate-unskew;
-  //     //   position: absolute;
-  //     //   top: $space-1;
-  //     //   top: 13%;
-  //     //   left: 50vw;
-  //     //   min-width: 95vw;
-
-  //     //   & a > h5 {
-  //     //     font-size: $font-3xl;
-  //     //   }
-  //     // }  
-  //   } 
-  //   .portfolioMosaic {   
-  //     top: 40%;
-  //     width: 95vw;
-  //     height: 47dvh;
-  //     & ul > li {
-  //       height: 90% !important;
-  //     }
-  //   }  
-  // }
-
   @media screen and (max-width:1100px) {
     .portfolioContainer {
       .portfolioSidebar {

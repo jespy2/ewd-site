@@ -271,7 +271,56 @@
   
 //  PORTRAIT
 @media screen and (orientation: portrait) {      
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 700px) {.hobbiesAccordianContainerInfoHidden {
+    position: absolute;
+    @include center-x-y;
+    top: 25vh;
+    width: 95vw;
+    padding: $space-2;
+
+    .HobbiesAccordianItem {
+      margin: 0;
+      text-align: left;
+
+      > [role = "button"] {
+        height: 1.5rem;
+        min-height: unset;
+        max-height: fit-content;
+
+        > div {
+          margin: 1px 0;
+          > p {
+            font-size: $font-sm;
+          }
+        }
+      }
+  
+      .hobbiesCard {
+        display: flex;
+        flex-direction: column;
+        > [role = "img"] {
+          height: 20vh;
+        }
+        > div > p {
+          font-size: $font-sm;
+          line-height: unset;
+        }
+      }
+      
+      .accordianItemContent {
+        margin-top: 1vh;
+        // height: 23vh;
+      }
+  
+  
+      .openAboutModal {
+        top: $space-7;
+        > svg {
+          font-size: unset;
+        }
+      }
+    }
+  }  
     .hobbiesAccordianContainer {
       width: unset;
       z-index: 50;
