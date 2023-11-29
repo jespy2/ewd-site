@@ -51,6 +51,7 @@ export const Mosaic = ({
 							{item.children}
 						</Box>
 						<ImageListItemBar
+							className={styles.mosaicTitleBar}
 							title={item.title}
 							subtitle={item.subtitle}
 							position='below'
