@@ -1,4 +1,4 @@
-import { useState, Dispatch, SetStateAction } from 'react';
+import { useState, useEffect } from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Box, Card, CardContent, CardMedia, ClickAwayListener, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import OpenInFullIcon from "@mui/icons-material/OpenInFull";
@@ -19,9 +19,13 @@ export const Accordian = (props: IAccordianProps) => {
 
 	const handleClickAway = (accordianName: string) => {
 		setExpanded({ ...expanded, [accordianName]: false });
+	};
+
+	useEffect(() => { 
+
 		const allItemsClosed = Object.values(expanded).every((item) => item === false)
 		setInfoHidden(allItemsClosed ? false : true);
-	};
+	}, [expanded]);
 
   const accordianItems = hobbiesAccordianProps.map((item) => { 
 		return (
