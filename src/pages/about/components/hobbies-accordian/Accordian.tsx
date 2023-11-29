@@ -19,6 +19,8 @@ export const Accordian = (props: IAccordianProps) => {
 
 	const handleClickAway = (accordianName: string) => {
 		setExpanded({ ...expanded, [accordianName]: false });
+		const allItemsClosed = Object.values(expanded).every((item) => item === false)
+		setInfoHidden(allItemsClosed ? false : true);
 	};
 
   const accordianItems = hobbiesAccordianProps.map((item) => { 

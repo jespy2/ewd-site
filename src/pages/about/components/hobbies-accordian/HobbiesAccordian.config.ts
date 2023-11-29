@@ -12,6 +12,7 @@ export interface IAccordianItemProps {
 }
  
 export interface IAccordianProps { 
+  infoHidden: boolean;
 	setInfoHidden: Dispatch<SetStateAction<boolean>>;
 	openModal: (item: IAccordianItemProps) => void;
 }

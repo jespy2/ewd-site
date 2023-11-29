@@ -50,12 +50,11 @@ export const About = () => {
 		<div className={styles.aboutContainer}>
 					
 			{modalIsOpen && <Modal children={modalIsOpen} closeModal={closeModal} />}
-			<Box className={styles.aboutSubContainer}>
-				<HobbiesAccordian setInfoHidden={setInfoHidden} openModal={openModal} />
+			<Box className={infoHidden ? styles.aboutSubContainerInfoHidden : styles.aboutSubContainer}>
+				<HobbiesAccordian setInfoHidden={setInfoHidden} openModal={openModal} infoHidden={infoHidden} />
 				{(!screenIsSmall || showMore) && (
 					<Box
-						className={styles.aboutInfoContainer}
-						sx={{ display: infoHidden ? "none" : "block" }}
+						className={infoHidden ? styles.aboutInfoContainerHidden : styles.aboutInfoContainer}
 					>
 						<Box className={styles.aboutInfoText}>
 							<Typography variant='h5' display='block'>
