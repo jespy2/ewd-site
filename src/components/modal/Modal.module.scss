@@ -44,7 +44,8 @@
   @media screen and (max-height: 895px) {  
     .modal {
       .closeContainer > svg {
-        margin-right: $screen-margin;
+        margin-top: 5vw;
+        margin-right: 10vw;
       }
       .modalContent {
         height: 90vh;
