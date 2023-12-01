@@ -19,7 +19,8 @@ export const HomeInfoText = (props: IHomeInfoTextProps) => {
           <>
             <Box
               className={styles.openHomeModal}
-              onClick={() => openModal()}
+              onClick={() => openModal()}            
+							onKeyDown={e => e.key === 'Enter' ? openModal() : ''}
               aria-label="Open the modal"
               role="button"
               tabIndex={0}
