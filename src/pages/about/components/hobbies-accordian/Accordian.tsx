@@ -41,8 +41,8 @@ export const Accordian = (props: IAccordianProps) => {
 				>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
-					aria-controls='panel1a-content'
-					id='panel1a-header'
+						aria-controls={`${item.title} panel-content`}
+					id={`${item.title} panel-header`}
 				>
 					<Typography variant='body1' display='block'>
 						{item.title}
@@ -62,7 +62,9 @@ export const Accordian = (props: IAccordianProps) => {
           <>
             <Box
               className={styles.openAboutModal}
-              onClick={() => openModal(item)}
+							onClick={() => openModal(item)}
+							onKeyDown={e => e.key === 'Enter' ? openModal(item) : ''}
+              tabIndex={0}
             >
               <OpenInFullIcon />
             </Box>
