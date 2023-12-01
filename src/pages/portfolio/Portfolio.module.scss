@@ -178,7 +178,6 @@
       .portfolioMosaic {
         > ul > li {
           &:hover > .mosaicText {
-            top: -5vh;
             h4 {
               font-size: $font-md;
             }
@@ -243,6 +242,9 @@
       } 
     
       .portfolioMosaic > ul > li {
+        &:hover > .mosaicText {
+          top: -5vh;
+        }
         max-height: 20vh !important;
     
         p {
