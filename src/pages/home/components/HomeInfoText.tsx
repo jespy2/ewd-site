@@ -14,12 +14,15 @@ export const HomeInfoText = (props: IHomeInfoTextProps) => {
 
 	return (
 		<>
-      <Box className={styles.homeInfoBodyText}>
+      <Box className={styles.homeInfoBodyText} tabIndex={0} >
         {(!modalIsOpen && openModal) && 
           <>
             <Box
               className={styles.openHomeModal}
               onClick={() => openModal()}
+              aria-label="Open the modal"
+              role="button"
+              tabIndex={0}
             >
               <OpenInFullIcon />
             </Box>

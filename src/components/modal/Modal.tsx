@@ -18,8 +18,14 @@ export const Modal = (props: IModalProps ) => {
 				<Box
 					className={styles.closeContainer}
 					onClick={() => closeModal()}
+					tabIndex={0}
 				>
-					<CloseIcon />
+					<CloseIcon
+						aria-label="Close the modal"
+						role="link"
+						focusable={true}
+						aria-hidden={false}
+					/>
 				</Box>
 				{children as ReactNode}
 			</Box>

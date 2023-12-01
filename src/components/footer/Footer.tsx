@@ -8,7 +8,7 @@ import styles from './Footer.module.scss';
 export const Footer = ({ page }: {page: string}) => {
   return (
     <>
-    <Link href='/'>
+    <Link className={styles.homeLink} href='/' aria-label="Visit the Home page to be introduced to James" >
       <Box className={styles.espylogo}>
 					<EspyLogo />
 				<Box className={styles.nameContainer}>
@@ -22,7 +22,7 @@ export const Footer = ({ page }: {page: string}) => {
           ? < Typography className={styles.navLink} variant='h6' sx={{ color: 'yellow' }} >
               ABOUT
             </Typography>
-          : <Link href='/about' className={styles.navLink} variant='h6' underline='none' >
+          : <Link href='/about' className={styles.navLink} variant='h6' underline='none' aria-label="Visit the About page to learn more about James" >
               ABOUT
             </Link>
         }
@@ -31,7 +31,7 @@ export const Footer = ({ page }: {page: string}) => {
           ? < Typography className={styles.navLink} variant='h6' sx={{ color: 'yellow' }} >
               PORTFOLIO
             </Typography>
-          : <Link href='/portfolio' className={styles.navLink} variant='h6' underline='none' >
+          : <Link href='/portfolio' className={styles.navLink} variant='h6' underline='none' aria-label="Visit the Portfolio page to learn more about James work and experience" >
               PORTFOLIO
             </Link>
         }
@@ -40,7 +40,7 @@ export const Footer = ({ page }: {page: string}) => {
           ? < Typography className={styles.navLink} variant='h6' sx={{ color: 'yellow' }} >
               CONTACT
             </Typography>
-          : <Link href='/contact' className={styles.navLink} variant='h6' underline='none' >
+          : <Link href='/contact' className={styles.navLink} variant='h6' underline='none' aria-label="Visit the Contact page to get in touch with James" >
               CONTACT
             </Link>
         }

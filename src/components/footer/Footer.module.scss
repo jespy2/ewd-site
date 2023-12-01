@@ -1,10 +1,11 @@
 @import '../../styles/main.scss';
 
-.espylogo {
-  width: 20rem;
+.homeLink {
   position: absolute;
   bottom: $space-7;
   left: $screen-margin;
+  .espylogo {
+  width: 20rem;
   svg {
     width: 15rem;
     height: 15rem;
@@ -18,6 +19,7 @@
     color: $white;
     margin-top: $space-6;
   }
+}
 }
 .navContainer {
   width: 40vw;
@@ -59,23 +61,25 @@
 }
 
 @media screen and (max-width: 900px) {
-  .espylogo {
-  width: 10rem;
-  bottom: $space-6;
-  svg {
-    width: 5rem;
-    height: 5rem;
-  }
+  .homeLink {
+    .espylogo {
+      width: 10rem;
+      bottom: $space-6;
+      svg {
+        width: 5rem;
+        height: 5rem;
+      }
 
-  .nameContainer {
-    margin-top: $space-4;
-    h2 {
-      font-size: $font-xl;
+      .nameContainer {
+        margin-top: $space-4;
+        h2 {
+          font-size: $font-xl;
+        }
+        h5 {
+          font-size: .75rem;
+        }
+      }
     }
-    h5 {
-      font-size: .75rem;
-    }
-  }
   }
   .navContainer {
     bottom: $space-6;
@@ -90,26 +94,29 @@
 }
 
 @media screen and (max-width: 600px) {
-  .espylogo {
-    display: flex;
-      align-items: center;
-      justify-content: center;
-    width: 8rem;
-    svg {
-      width: 2rem;
-      height: 2rem;
-    }
+  .homeLink {
+    .espylogo {
+      display: flex;
+        align-items: center;
+        justify-content: center;
+      width: 8rem;
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
 
-  .nameContainer {
-    margin-top: $space-1;
-    h2 {
-      font-size: $font-md;
-    }
-    h5 {
-      font-size: $font-xs;
+      .nameContainer {
+        margin-top: $space-1;
+        h2 {
+          font-size: $font-md;
+        }
+        h5 {
+          font-size: $font-xs;
+        }
+      }
     }
   }
-}
+  
 .navContainer {
   width: 60vw;
   bottom: $space-4;
@@ -126,24 +133,26 @@
 
 @media screen and (orientation: landscape) {
   @media screen and (max-height: 930px) {
-    .espylogo {
-      display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 8rem;
-        bottom:  $space-4;
-        svg {
-          width: 2rem;
-          height: 2rem;
-        }
-    
-      .nameContainer {
-        margin-top: $space-1;
-        h2 {
-          font-size: $font-md;
-        }
-        h5 {
-          font-size: $font-xs;
+    .homeLink {
+      .espylogo {
+        display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 8rem;
+          bottom:  $space-4;
+          svg {
+            width: 2rem;
+            height: 2rem;
+          }
+      
+        .nameContainer {
+          margin-top: $space-1;
+          h2 {
+            font-size: $font-md;
+          }
+          h5 {
+            font-size: $font-xs;
+          }
         }
       }
     }
