@@ -16,11 +16,11 @@ export const Contact = () => {
         <ContactForm />
 
       <Box className={styles.linksContainer}>
-        <Link href='https://github.com/jespy2' target='_blank' >
-          <img src={GithubLogo} />
+        <Link href='https://github.com/jespy2' target='_blank' tabIndex={0} >
+          <img src={GithubLogo} alt='github logo' />
         </Link>
-        <Link href='https://www.linkedin.com/in/jamesespy/' target='_blank' >
-          <img src={LinkedInLogo} />
+        <Link href='https://www.linkedin.com/in/jamesespy/' target='_blank' tabIndex={0} >
+          <img src={LinkedInLogo} alt='linkedin logo' />
         </Link>        
       </Box>
               
