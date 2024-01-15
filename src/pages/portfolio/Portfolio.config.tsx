@@ -1,13 +1,11 @@
-import { Box, Link, Typography } from '@mui/material';
+import { Box, Link, List, ListItem, ListItemIcon, Typography } from '@mui/material';
+import { LabelImportant } from '@mui/icons-material';
 import { Document, Page, pdfjs } from 'react-pdf';
 
 import GithubLogo from '../../images/logos/github.png';
 import GoMenuLogo from '../../images/logos/gomenulogo.svg';
 import StorialLogo from '../../images/logos/storiallogo.png';
 import CityPickerLogo from '../../images/logos/citypickerlogo.svg';
-import Resume from '../../assets/resume.pdf'
-
-
 
 import GomenuScreen from "../../images/pics/gomenu-screen.png";
 import StorialScreen from "../../images/pics/storial-screen.png";
@@ -19,12 +17,62 @@ import styles from './Portfolio.module.scss'
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 export const itemData = [
+  
   {
+    img: StorialScreen,
+    title: 'Storial',
+    subtitle: 'Basic CRUD app',
+    rows: 2,
+    cols: 3,
+    children: 
+      <div className={styles.portfolioItemContent}>
+        <Typography variant='h4' >Storial</Typography>
+        
+        <div className={styles.portfolioModalCardHero} style={{backgroundImage: `url(${StorialScreen})`}} />
+        <Typography variant='body1' ><strong>Stack:</strong>  React, Redux Toolkit, Typescipt, React Testing Library, Node/Express, Mongo DB (Atlas), Tailwind.CSS</Typography>
+        <Typography variant='body1' ><strong>Design Notes:</strong>
+          <List>
+            <ListItem><ListItemIcon><LabelImportant fontSize='small' color='primary' /></ListItemIcon>
+              Code reusability via componentization, custom hooks, util functions
+            </ListItem>
+            <ListItem><ListItemIcon><LabelImportant fontSize='small' color='primary' /></ListItemIcon>
+              Combined Separation of Concerns and Atomic Design to simplify the process of orienting oneself in the code and seeing the larger structure of the app.  Concerns are separated by directory (api, hooks, components, etc) and then atomized from there.  For example, the modal directory contains the  code for the modal, constituent building blocks (components) and content for specific implementations (content).  
+            </ListItem>
+            <ListItem><ListItemIcon><LabelImportant fontSize='small' color='primary' /></ListItemIcon>
+              Index files import/export directory components/functions to simplify paths in import statements..
+            </ListItem>
+            <ListItem><ListItemIcon><LabelImportant fontSize='small' color='primary' /></ListItemIcon>
+              Secure authentication using client cookies and storage of encrypted passwords.
+            </ListItem>
+            <ListItem><ListItemIcon><LabelImportant fontSize='small' color='primary' /></ListItemIcon>
+              Light/Dark mode.
+            </ListItem>
+            <ListItem><ListItemIcon><LabelImportant fontSize='small' color='primary' /></ListItemIcon>
+              Brand consistency via custom logo and color style guide.
+            </ListItem>
+          </List>
+        </Typography>
+        <Typography variant='body2' >This was a quick CRUD app I built for an assessment for a role I ended up taking.  Because the role was frontend-focused, I was tasked with a stubbed out UI, but went ahead and built a full stack app so the interview team could punch through it more easily.  Looking back at the repo, I realized it had solid bones for building a portfolio app that would highlight my skills as an engineer.  The app is super boring (basically a todo list with a “library” skin), but under the hood, I have built it to be robust, performant, scalable and accessible for other engineers to maintain.  It is way over-engineered for what the app is, but I approached it with the question in mind of “what if this was an initial MVP for an enterprise product with a long design path”.</Typography><br />
+        <Box >
+          <Link className={styles.portfolioLinks} href='https://github.com/jespy2/storial-2.0' variant='body2' target='_blank' underline='none' color='yellow'>
+            <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
+            Review the code and run the app on your machine (documentation and quick start guide in the README)
+          </Link>
+        </Box>
+        <Box >
+          <Link className={styles.portfolioLinks} href='https://jamesespy.com/storial/' variant='body2' target='_blank' underline='none' color='yellow'>
+            <img src={StorialLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
+            Try out live version of the app (code available for review in the repo above)
+          </Link>
+        </Box>
+      </ div>
+  
+  },{
     img: GomenuScreen,
     title: 'GoMenu',
     subtitle: 'Recipe organization tool',
     rows: 2,
-    cols: 3,
+    cols: 2,
     children: 
       <div className={styles.portfolioItemContent}>
         <Typography variant='h4' >GoMenu</Typography>
@@ -67,30 +115,6 @@ export const itemData = [
           </Link>
         </Box>
       </ div>
-  },
-  {
-    img: StorialScreen,
-    title: 'Storial',
-    subtitle: 'Basic CRUD app',
-    rows: 2,
-    cols: 2,
-    children: 
-      <div className={styles.portfolioItemContent}>
-        <Typography variant='h4' >Storial</Typography>
-        
-        <div className={styles.portfolioModalCardHero} style={{backgroundImage: `url(${StorialScreen})`}} />
-        <Typography variant='body1' >This was for an assessment I did in 2021 for a role I ended up taking.  The prompt was the following:</Typography>
-        <Typography variant='body2' sx={{ fontStyle: 'italic' }} >Using the UI framework of your choice, build a UI around a hypothetical RESTful library API. Assume this API returns a list of books in a library, and allows for CRUD operations on a single book. The application should support those endpoints.</Typography><br />
-        <Typography variant='body1' >Because this was a frontend-only role, I was only tasked with building the UI, but decided to build a fullstack app so that the reviewing team could punch through the final product.  I started with using Adobe products to build the branding package, including name, logo, color palate and wireframing.  The frontend was in React, and I took the opportunity to try out Tailwind.css (which I enjoyed and ended up using quite a bit in my new role).  The backend was built with Node/Express and MongoDB. </Typography><br />
-        <Typography variant='body1' >Since this was a takehome assessment, I had only a few days to go from design to prod.</Typography><br />
-        <Box >
-          <Link className={styles.portfolioLinks} href='https://github.com/jespy2/storial' variant='body2' target='_blank' underline='none' color='yellow'>
-            <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
-            Review the code and run the app on your machine (documentation and quick start guide in the README)
-          </Link>
-        </Box>
-      </ div>
-  
   },
   {
     img: CityPickerScreen,
