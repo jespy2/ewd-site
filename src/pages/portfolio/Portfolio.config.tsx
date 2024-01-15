@@ -23,15 +23,15 @@ export const itemData = [
     title: 'Storial',
     subtitle: 'Basic CRUD app',
     rows: 2,
-    cols: 3,
+    cols: 6,
     children: 
       <div className={styles.portfolioItemContent}>
         <Typography variant='h4' >Storial</Typography>
         
         <div className={styles.portfolioModalCardHero} style={{backgroundImage: `url(${StorialScreen})`}} />
-        <Typography variant='body1' ><strong>Stack:</strong>  React, Redux Toolkit, Typescipt, React Testing Library, Node/Express, Mongo DB (Atlas), Tailwind.CSS</Typography>
-        <Typography variant='body1' ><strong>Design Notes:</strong>
-          <List>
+        <Typography variant='body1' ><strong style={{textDecoration: 'underline'}}>Stack:</strong>  React, Redux Toolkit, Typescipt, React Testing Library, Node/Express, Mongo DB (Atlas), Tailwind.CSS</Typography><br />
+        <Typography variant='body1' ><strong style={{textDecoration: 'underline'}}>Design Notes:</strong>
+          <List dense={true}>
             <ListItem><ListItemIcon><LabelImportant fontSize='small' color='primary' /></ListItemIcon>
               Code reusability via componentization, custom hooks, util functions
             </ListItem>
@@ -56,7 +56,7 @@ export const itemData = [
         <Box >
           <Link className={styles.portfolioLinks} href='https://github.com/jespy2/storial-2.0' variant='body2' target='_blank' underline='none' color='yellow'>
             <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
-            Review the code and run the app on your machine (documentation and quick start guide in the README)
+            Review the code and run the app on your machine (documentation and quick start guide in the README). Note:  The there are two branches mentioned in the documentation, one for running locally and one for running online.  The latter branch has more features and code complexity.
           </Link>
         </Box>
         <Box >
@@ -72,114 +72,131 @@ export const itemData = [
     title: 'GoMenu',
     subtitle: 'Recipe organization tool',
     rows: 2,
-    cols: 2,
+    cols: 3,
     children: 
       <div className={styles.portfolioItemContent}>
         <Typography variant='h4' >GoMenu</Typography>
+        <Typography variant='body1' ><strong style={{textDecoration: 'underline'}}>Stack:</strong>  React, Typescript, Figma (wireframming), SASS/SCSS, Material UI, Node/Express, MongoDB(Atlas)</Typography><br />
+        <Typography variant='body1' ><strong style={{textDecoration: 'underline'}}>Design Notes:</strong>
+          <List dense={true}>
+            <ListItem><ListItemIcon><LabelImportant fontSize='small' color='primary' /></ListItemIcon>
+            Scrapes LD+JSON from websites to capture recipe data
+            </ListItem>
+            <ListItem><ListItemIcon><LabelImportant fontSize='small' color='primary' /></ListItemIcon>
+            Search and filtering via Atlas search and server-side middleware 
+            </ListItem>
+          </List>
+        </Typography>
         <div className={styles.portfolioModalCardHero} style={{backgroundImage: `url(${GomenuScreen})`}} />
-        <Typography variant='body1' >After spending the past two years as a frontend dev, this project is me getting back to my roots in fullstack engineering, as well as flexing some of my skills that have matured in recent years.  I wanted something that had some interesting challenges in designing the UI and in the service layer, so I had the idea for an app that would take a URL for a recipe, scrape the page and enter the data into a form for the user to submit as a recipe card that gets added to the "cookbook".  A user is then able to add comments and ratings to their recipes, as well as find them easily through search and filtering.</Typography><br />
-        <Typography variant='body1' >I used Figma for wireframing, Inkskape for icons and logos, and built a Jira board to track tasks and progress, along with managing deadlines. The frontend is built in React/Typescript and styled with SCSS and Material UI.  I built the server using Node/Express, which handles the CRUD functionality and webscraping.  I applied cloudbased MongoDB for the database.  Search and filtering is handled by Atlas search and server-side middleware.</Typography><br />
-        <Typography variant='body1' >This project should be ready for MVP release very soon, and I have a roadmap for adding features and quality of life updates soon after.</Typography><br />
-        <Box >
-          <Link className={styles.portfolioLinks} href='https://github.com/jespy2/gomenu' variant='body2' target='_blank' underline='none' color='yellow'>
-            <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
-            Review the code
-          </Link>
-          <Link
-            className={styles.portfolioLinks} 
-            href='https://github.com/jespy2'
-            variant='body2'
-            target='_blank'
-            underline='none'
-            color='yellow'
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              marginTop: '1rem'
-            }}
-          >
-            <Box sx={{
-              backgroundColor: 'white',
-              borderRadius: '4px',
-              width: '1.5rem',
-              height: '1.5rem',
-              marginRight: '1rem'
-              }}>
-              <img
-                src={GoMenuLogo}
-                alt='launch storial app'
-                style={{ width: '100%', height: '100%', margin: '0 auto' }}
-              />
-            </Box>
-            Check back--you will be able to try out the app in your browser upon release        
-          </Link>
-        </Box>
-      </ div>
-  },
-  {
-    img: CityPickerScreen,
-    title: 'CityPicker',
-    subtitle: 'Find a new city basic on your personal preferences',
-    rows: 2,
-    cols: 2,
-    children: 
-      <div className={styles.portfolioItemContent}>
-        <Typography variant='h4' >City Picker</Typography>
-
-        <div className={styles.portfolioModalCardHero} style={{backgroundImage: `url(${CityPickerScreen})`}} />
-        <Typography variant='body1' >This was one of my first app projects in React (as opposed to "static" websites, which I'd been building for a few years).  The concept was to guide users through various data to determine what city would be the best fit for them.  The code is a bit rough, as I was tackling a bunch of new tech and concepts.  This is a relatively simple project in retrospect, but it was an important step for me in bringing together much of what I'd learned on my path to becoming an enterprise-level engineer (transitioning from freelance website design).</Typography><br />
-
-        <Typography variant='body1' >My intention with this project was to highlight my front-end skills. There was some interesting challenges with the data (collection, processing and algorithm development), but didn't want to make that too central to this addition to my portfolio.</Typography><br />
-
-        <Typography variant='body1' >So, I went with a small data set and only four variables with which the user can interact with the data. I could see at some point coming back to this app, adding a backend, expanding the dataset to encompass most US cities (including towns under 50,000) and increasing the variable choices to include things like cost of living, religiosity, commute times, etc. This is a very scalable project, though I would need to do some major refactors first to incorporate more advanced design principles and integrate tech that I wasn't familiar with at the time (such as Typescript)</Typography><br />
-
-        <Typography variant='body1' >The UI was built with vanilla React.js. I built a branding package with wireframes, images (logos and icons) and color palate. I did the webscrapping and data processing in Node.js.</Typography><br />
-
-        <Typography variant='body1' >A quick note on UX: In designing the sliders for selecting variable ranges, I intentionally left out quantifying feedback like tick markers or popups on the handles that gave a specific number or party range. I wanted it to be more a "feel" experience than a "think" experience.</Typography><br />
-        <Box>
+          <Typography variant='body1' >
+            This a project for me to use once completed.  I have Google docs that list recipes I’ve found over the years, but it is a problematic approach in terms of organization.  Once complete, the app will take a URL for a recipe, scrape the data and create a recipe card that goes into the user’s “cookbook”.  The cookbook is then easily organized by category and cooking-method, permits user notes and ratings, all of which will make finding the right recipe easier.
+          </Typography><br />
+          <Typography variant='body1' >
+            Currently in the middle of a major refactor to incorporate some new mobile-centric ideas into the MVP.
+          </Typography><br />
+          <Typography variant='body1' >
+            This project should be ready for MVP release very soon, and I have a roadmap for adding features and quality of life updates soon after.
+          </Typography><br />
           <Box >
-          <Link className={styles.portfolioLinks} href='https://github.com/jespy2/CityPicker' variant='body2' target='_blank' underline='none' color='yellow'>
-            <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
-            Review the code and run the app on your machine (documentation README)
-          </Link>
-          <Link
-            href='https://espywebdesign.com/reactApps/citypicker/index.html'
-            className={styles.portfolioLinks} 
-            variant='body2'
-            target='_blank'
-            underline='none'
-            color='yellow'
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              marginTop: '1rem'
-            }}
-          >
-            <Box sx={{
-              backgroundColor: 'white',
-              borderRadius: '4px',
-              width: '1.5rem',
-              height: '1.5rem',
-              marginRight: '1rem',
-              }}>
-              <img
-                src={CityPickerLogo}
-                alt='launch city picker app'
-                style={{ width: '100%', height: '100%', margin: '0 auto' }}
-              />
-            </Box>
-            Try out the app in your browser          
-          </Link>
-        </Box>
-        </Box>
+            <Link className={styles.portfolioLinks} href='https://github.com/jespy2/gomenu' variant='body2' target='_blank' underline='none' color='yellow'>
+              <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
+              Review the code
+            </Link>
+            <Link
+              className={styles.portfolioLinks} 
+              href='https://github.com/jespy2/gomenu'
+              variant='body2'
+              target='_blank'
+              underline='none'
+              color='yellow'
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                marginTop: '1rem'
+              }}
+            >
+              <Box sx={{
+                backgroundColor: 'white',
+                borderRadius: '4px',
+                width: '1.5rem',
+                height: '1.5rem',
+                marginRight: '1rem'
+                }}>
+                <img
+                  src={GoMenuLogo}
+                  alt='launch gomenu app'
+                  style={{ width: '100%', height: '100%', margin: '0 auto' }}
+                />
+              </Box>
+              Check back--you will be able to try out the app in your browser upon release        
+            </Link>
+          </Box>
       </ div>
   },
+  // {
+  //   img: CityPickerScreen,
+  //   title: 'CityPicker',
+  //   subtitle: 'Find a new city basic on your personal preferences',
+  //   rows: 2,
+  //   cols: 2,
+  //   children: 
+  //     <div className={styles.portfolioItemContent}>
+  //       <Typography variant='h4' >City Picker</Typography>
+
+  //       <div className={styles.portfolioModalCardHero} style={{backgroundImage: `url(${CityPickerScreen})`}} />
+  //       <Typography variant='body1' >This was one of my first app projects in React (as opposed to "static" websites, which I'd been building for a few years).  The concept was to guide users through various data to determine what city would be the best fit for them.  The code is a bit rough, as I was tackling a bunch of new tech and concepts.  This is a relatively simple project in retrospect, but it was an important step for me in bringing together much of what I'd learned on my path to becoming an enterprise-level engineer (transitioning from freelance website design).</Typography><br />
+
+  //       <Typography variant='body1' >My intention with this project was to highlight my front-end skills. There was some interesting challenges with the data (collection, processing and algorithm development), but didn't want to make that too central to this addition to my portfolio.</Typography><br />
+
+  //       <Typography variant='body1' >So, I went with a small data set and only four variables with which the user can interact with the data. I could see at some point coming back to this app, adding a backend, expanding the dataset to encompass most US cities (including towns under 50,000) and increasing the variable choices to include things like cost of living, religiosity, commute times, etc. This is a very scalable project, though I would need to do some major refactors first to incorporate more advanced design principles and integrate tech that I wasn't familiar with at the time (such as Typescript)</Typography><br />
+
+  //       <Typography variant='body1' >The UI was built with vanilla React.js. I built a branding package with wireframes, images (logos and icons) and color palate. I did the webscrapping and data processing in Node.js.</Typography><br />
+
+  //       <Typography variant='body1' >A quick note on UX: In designing the sliders for selecting variable ranges, I intentionally left out quantifying feedback like tick markers or popups on the handles that gave a specific number or party range. I wanted it to be more a "feel" experience than a "think" experience.</Typography><br />
+  //       <Box>
+  //         <Box >
+  //         <Link className={styles.portfolioLinks} href='https://github.com/jespy2/CityPicker' variant='body2' target='_blank' underline='none' color='yellow'>
+  //           <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
+  //           Review the code and run the app on your machine (documentation README)
+  //         </Link>
+  //         <Link
+  //           href='https://espywebdesign.com/reactApps/citypicker/index.html'
+  //           className={styles.portfolioLinks} 
+  //           variant='body2'
+  //           target='_blank'
+  //           underline='none'
+  //           color='yellow'
+  //           sx={{
+  //             display: 'flex',
+  //             flexDirection: 'row',
+  //             marginTop: '1rem'
+  //           }}
+  //         >
+  //           <Box sx={{
+  //             backgroundColor: 'white',
+  //             borderRadius: '4px',
+  //             width: '1.5rem',
+  //             height: '1.5rem',
+  //             marginRight: '1rem',
+  //             }}>
+  //             <img
+  //               src={CityPickerLogo}
+  //               alt='launch city picker app'
+  //               style={{ width: '100%', height: '100%', margin: '0 auto' }}
+  //             />
+  //           </Box>
+  //           Try out the app in your browser          
+  //         </Link>
+  //       </Box>
+  //       </Box>
+  //     </ div>
+  // },
   {
     img: RedisHawkScreen,
     title: 'redis-hawk',
     subtitle: 'App for monitoring and visualizing  granular key-level details for your Redis deployment',
     rows: 2,
-    cols: 3,
+    cols: 2,
     children: 
       <div className={styles.portfolioItemContent}>
         <Typography variant='h4' >redis-hawk</Typography>
