@@ -4,3 +4,8 @@ body, html, #root {
   height: 100%;
   background-color: black;
 }
+
+a:-webkit-any-link {
+  text-decoration: none;
+  cursor: pointer;
+}
