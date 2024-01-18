@@ -1,6 +1,5 @@
 import { Box, Link, List, ListItem, ListItemIcon, Typography } from '@mui/material';
 import { LabelImportant } from '@mui/icons-material';
-import { Document, Page, pdfjs } from 'react-pdf';
 
 import GithubLogo from '../../images/logos/github.png';
 import GoMenuLogo from '../../images/logos/gomenulogo.svg';
@@ -13,8 +12,6 @@ import CityPickerScreen from "../../images/pics/city-picker-screen.png";
 import RedisHawkScreen from "../../images/pics/redis-hawk-screen.png";
 
 import styles from './Portfolio.module.scss'
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 export const itemData = [
   
@@ -56,7 +53,7 @@ export const itemData = [
         <Box >
           <Link className={styles.portfolioLinks} href='https://github.com/jespy2/storial-2.0' variant='body2' target='_blank' underline='none' color='yellow'>
             <img src={GithubLogo} alt='github' style={{marginRight: '1rem', width: '1.5rem', height: '1.5rem'}} />
-            Review the code and run the app on your machine (documentation and quick start guide in the README). Note:  The there are two branches mentioned in the documentation, one for running locally and one for running online.  The latter branch has more features and code complexity.
+            Review the code and run the app on your machine (documentation and quick start guide in the README). Note:  The there are two branches mentioned in the documentation, one for running locally and one for running online.  The online branch has more features and code complexity.
           </Link>
         </Box>
         <Box >
