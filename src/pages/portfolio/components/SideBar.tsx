@@ -26,7 +26,7 @@ export const SideBar = () => {
 				<Box className={styles.techStackSection}>
 					<Typography variant='h5'>Other:</Typography>
 					<Typography variant='body1'>
-						Docker, Github Actions, Agile, Version Control (Git/Github)
+						Docker, Github Actions, Agile, Version Control (Git/Github) 
 					</Typography>
 				</Box>
 			</Box>
