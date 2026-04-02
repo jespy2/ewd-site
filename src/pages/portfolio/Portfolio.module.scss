@@ -59,7 +59,6 @@
       border-radius: $radius-large;
 
       & h5, a {
-        // transform: skew(5deg);
         text-align: center;
         width: $width-full;
       }
@@ -270,7 +269,7 @@
         top: 13%;
         left: 50%;
         min-width: 92vw;
-        transform: rotate(5deg) translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     
         .techStack {
           .techStackSection {
@@ -286,7 +285,7 @@
       
         .resumeLink {
           position: absolute;
-          top: 8vh;
+          top: 25vh;
           right: $screen-margin;
           width: 25vw;
 
@@ -296,7 +295,7 @@
         }  
       } 
       .portfolioMosaic {   
-        top: 47%;
+        top: 35vh;
         width: 95vw;
         height: 47dvh;
         left: 50vw;
@@ -315,25 +314,12 @@
         transform: translate(-50%,-50% );
     
         .techStack {
-          transform: none;
-          .techStackSection {
-            display: flex;
-            padding:  $space-1 $space-5;
-            text-align: left;
-            
-            & h5 {
-              margin-right: $space-7;
-            }
-
-            & h5, p {
-              transform: none;
-            }
-          }
+          display:none;
         }
       
         .resumeLink {
           position: absolute;
-          top: 10vh;
+          bottom: 10vh;
           right: $screen-margin;
           width: fit-content;
           transform: none;
@@ -347,9 +333,9 @@
         }  
       } 
       .portfolioMosaic {   
-        top: 55%;
+        top: 3vh;
         width: 95vw;
-        height: 52vh;
+        height: 70vh;
         left: 50vw;
         & ul > li {
           height: 90% !important;
@@ -375,32 +361,29 @@
       overflow-y: scroll;
       .portfolioSidebar {
         top: $space-0;
-        right: $space-0;
-        left: $space-0;
+        right: unset;
+        left: unset;
         min-width: unset;
         width: $width-full;
-        @include unrotate-unskew;
+        transform: unset;
     
       .techStack {
         display: none;
       }
     
       .resumeLink {
-        top: $space-5;
+        top: 1vh;
         right: unset;
         left: 50%;
+        height: 2vh;
         width: 80vw;
         border: black 1px solid;
         box-shadow: 2px 2px 2px black;
-        transform: translate(-50%) rotate(-5deg) skew(-5deg);;
-
-        & h5 {
-        transform: skew(-5deg);
-        }
+        transform: translate(-50%);
       }
     }
       .portfolioMosaic {
-        top: 50vh;
+        top: 10vh;
         height: 70vh;
         & > ul {
         grid-template-columns: 90vw !important; 
