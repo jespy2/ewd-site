@@ -11,11 +11,11 @@ export const SideBar = () => {
       <Typography variant="h3" >Tech Stack</Typography>
       <Box className={styles.techStackSection} >
         <Typography variant="h5" >Frontend:</Typography>
-        <Typography variant="body1" >React, Typescript, JavaScript, HTML, CSS and style frameworks (SASS/SCSS, Tailwind.css), Next JS, Redux, Wireframing/UX design, TDD (Jest, React Testing Library), Component Libraries (AntD, Bootstrap, Material UI, Semantic-UI)</Typography>
+        <Typography variant="body1" >React, Typescript, JavaScript, React Native, HTML, SASS/SCSS/CSS/Tailwind.css, Next JS, Redux, Wireframing/UX design, Figma, Storybook, OAuth, TDD (Jest, React Testing Library), Component Libraries (AntD, Bootstrap, Semantic-UI), Vite</Typography>
       </Box>
       <Box className={styles.techStackSection} >
         <Typography variant="h5" >Backend:</Typography>
-        <Typography variant="body1" >Node.js, Express, Redis, Postgres, NoSQL, </Typography>
+        <Typography variant="body1" >Node.js, Express, Redis, Python, Go, R, Postgres, NoSQL </Typography>
       </Box>
       <Box className={styles.techStackSection} >
         <Typography variant="h5" >Other:</Typography>

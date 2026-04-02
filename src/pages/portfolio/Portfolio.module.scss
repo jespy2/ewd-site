@@ -30,43 +30,36 @@
     height: $height-full;
     opacity: .7;
     background: rgb(2,0,36);
-    background: linear-gradient(0deg, rgba(2,0,36,1) 5%, rgba(9,9,121,1) 65%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(0deg, rgb(49, 49, 50) 5%, rgb(113, 113, 115) 65%, rgb(248, 249, 249) 100%);
   }
 
   .portfolioSidebar {
     position: absolute;
-    top: 4vh;
+    top: 5vh;
     left: $screen-margin;
     width: 13vw;
     border-radius: $radius-large;
-    @include rotate-skew;
 
     .techStack {
-      background-color:  $black-opacity-medium;
+      background-color:  $black-opacity-dark;
       padding: $space-5;   
       color: $white;
-      @include rotate-skew;
       width: $width-full;
       border-radius: $radius-large;
-
-      & h3, h5, p {
-        transform: skew(5deg)
-      }
       & h3 {
         font-size: $font-2xl;
       }
     }
 
     .resumeLink {
-      background-image: linear-gradient(240deg, #44eed4, #19a2ec);
+      background-color: #f3f6f5;
       margin-top: $space-6;
       padding: $space-5;  
-      @include rotate-skew;
       width: $width-full;
       border-radius: $radius-large;
 
       & h5, a {
-        transform: skew(5deg);
+        // transform: skew(5deg);
         text-align: center;
         width: $width-full;
       }
@@ -84,9 +77,9 @@
     background-color: $black-opacity-dark;
     width: 70vw;
     height: 75vh;
-    top: 45%;
+    top: 5vh;
     left: 60%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     padding: $space-6;
     border-radius: $radius-large;
     
