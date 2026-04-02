@@ -375,11 +375,13 @@
         top: 1vh;
         right: unset;
         left: 50%;
-        height: 2vh;
+        height: fit-content;
+        padding: 4px;
         width: 80vw;
         border: black 1px solid;
         box-shadow: 2px 2px 2px black;
         transform: translate(-50%);
+        padding: 4px;
       }
     }
       .portfolioMosaic {
